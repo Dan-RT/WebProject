@@ -15,11 +15,22 @@
 		<?php
 			include("navbar.php");
 			require_once("db.php");
+			require_once("product.php");
+
+			/*
+			$test = new Product();
+			$test->read_record();
+			$test->insert_record("TEST", "TEST", "TEST", "TEST", "TEST", "TEST", "TEST", "TEST", "TEST", "TEST");
+			*/
+
 		?>
+
+
+		
 
 		<div class="container-fullwidth container-fluid">
 			<div class="row">
-				<?php include("overview_beer.php"); ?>
+				<?php //include("overview_beer.php"); ?>
 			</div>
 		</div>
 		

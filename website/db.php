@@ -45,7 +45,7 @@
                             'Picture_path' => $Picture,
                             'Website' => $Website));
 
-        $response->closeCursor();
+        $req->closeCursor();
 
     }
 
