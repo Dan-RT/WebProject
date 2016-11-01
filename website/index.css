@@ -1,0 +1,51 @@
+
+@font-face {
+    font-family: "Renogare";
+    src: url('Fonts/Renogare.ttf');
+    font-family: "RussoOne-Regular";
+    src: url('Fonts/RussoOne-Regular.ttf');
+
+    font-family: "OpenSans-Semibold";
+    src: url('Fonts/OpenSans-Semibold.ttf');
+
+    font-family: "OpenSans-Bold";
+    src: url('Fonts/OpenSans-Bold.ttf.ttf');
+}
+
+body {
+	font-family: "OpenSans-Bold", sans-serif;
+}
+
+.choice {
+  color: black;
+  padding-top: 2vh;
+  margin-left: 20vw;
+}
+
+.shopping_section {
+  margin-top: 5vh;
+  margin-bottom: 16vh;
+}
+
+.pay_button {
+  margin-left: 42.5vw;
+  color: black;
+}
+
+.pay_button a {
+  color: black;
+}
+
+.pay_button a:hover {
+  text-decoration: none;
+}
+
+/*
+[class*="col-"], footer {
+  background-color: green;
+  border: 2px solid black;
+  border-radius: 6px;
+  line-height: 40px;
+  
+}
+*/

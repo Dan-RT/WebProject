@@ -1,0 +1,32 @@
+[class*="col-"] {
+  background-color: #D85C48;
+  /*border: 2px solid black;
+  border-radius: 6px;*/
+  line-height: 40px;
+  text-align: center;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+}
+
+body {
+	color: white;
+}
+
+.form_section {
+	margin-top: 7vh;
+	margin-bottom: 7vh;
+}
+
+.form_inside_1 {
+	padding-top: 0vh;
+	padding-bottom: 0vh;
+}
+
+.form_inside {
+	padding-top: 4vh;
+	padding-bottom: 4vh;
+}
+
+.btn_submit {
+	margin-top: 3vh;
+}
