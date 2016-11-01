@@ -3,10 +3,10 @@
 		<meta charset="utf-8" />
 		<title>Add new Beer</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-		<link rel="stylesheet" href="navbar.css"/>
-		<link rel="stylesheet" href="radio.css"/>
-		<link rel="stylesheet" href="add new beer.css"/>
+		<link href="CSS/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="CSS/navbar.css"/>
+		<link rel="stylesheet" href="CSS/radio.css"/>
+		<link rel="stylesheet" href="CSS/add new beer.css"/>
 	</head>
 
 	<body>
@@ -71,7 +71,7 @@
 
 
 
-						    	<button type="submit" class="btn_submit btn btn-lg btn-default" value="Enter">
+						    	<button type="submit" class="btn_enter btn btn-lg btn-default" value="Enter">
 						            <span class="glyphicon glyphicon-ok"></span> Enter
 						        </button>  
 

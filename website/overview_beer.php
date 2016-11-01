@@ -28,7 +28,7 @@
  		<div class="col-sm-7">
  			
  			<?php /*echo '<img class="beer_pic" src="'.$echo $donnees['Picture_path'].'.png" />';*/ ?>
- 			<?php echo '<img class="beer_pic" src="'.$donnees['Picture_path'].'" />'; ?>
+ 			<?php echo '<img class="beer_pic" src="Pictures/'.$donnees['Picture_path'].'" />'; ?>
 
         </div>
 
@@ -63,7 +63,7 @@
 
 		 		<div class="col-sm-5 beer_pic_details">
 		 			
-		 			<?php echo '<img class="" src="'.$donnees['Picture_path'].'" />'; ?>
+		 			<?php echo '<img class="" src="Pictures/'.$donnees['Picture_path'].'" />'; ?>
 
 		        </div>
 
@@ -82,12 +82,6 @@
 
 		   	</div>
 
-
-
-      		
-        	
-        	
-
       </div>
 
       <div class="modal-footer">
@@ -103,8 +97,6 @@
 <?php
     }
     
-	
-  
 	$reponse->closeCursor(); 
 
 ?>

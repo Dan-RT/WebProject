@@ -1,5 +1,5 @@
 
-<link rel="stylesheet" href="navbar.css"/>
+<link rel="stylesheet" href="CSS/navbar.css"/>
 
 <div class="container-fullwidth">
 

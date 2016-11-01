@@ -3,9 +3,9 @@
 		<meta charset="utf-8" />
 		<title>BEER'SPOT - Form</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-		<link rel="stylesheet" href="form.css"/>
-		<link rel="stylesheet" href="navbar.css"/>
+		<link href="CSS/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="CSS/form.css"/>
+		<link rel="stylesheet" href="CSS/navbar.css"/>
 	</head>
 
 	<body>
@@ -27,7 +27,7 @@
 						        	<label><input class="input-lg form-control" type="password" name="mdp" placeholder="Password"/></label>
 						    	<p>
 
-						    	<button type="submit" class="btn_submit btn btn-lg btn-default" value="Enter">
+						    	<button type="submit" class="btn_enter btn btn-lg btn-default" value="Enter">
 						            <span class="glyphicon glyphicon-ok"></span> Enter
 						        </button> 
 						        <p><a href="registration.php">Create your account</a></p> 

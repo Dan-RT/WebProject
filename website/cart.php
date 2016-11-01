@@ -4,10 +4,10 @@
 		<meta charset="utf-8" />
 		<title>BEER'SPOT</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-		<link rel="stylesheet" href="index.css"/>
-		<link rel="stylesheet" href="navbar.css"/>
-		<link rel="stylesheet" href="overview_beer.css"/>
+		<link href="CSS/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="CSS/index.css"/>
+		<link rel="stylesheet" href="CSS/navbar.css"/>
+		<link rel="stylesheet" href="CSS/overview_beer.css"/>
 	</head>
 
 	<body>
@@ -29,7 +29,7 @@
 					<div class="row">
 
 				 		<div class="col-sm-7">
-				 			<img class="beer_pic" src="Grim_blonde.png" />
+				 			<img class="beer_pic" src="Pictures/Grim_blonde.png" />
 				        </div>
 
 				        <ul class="col-sm-5 detail_beer">
@@ -50,7 +50,7 @@
 					<div class="row">
 
 				 		<div class="col-sm-7">
-				 			<img class="beer_pic" src="Grim_blonde.png" />
+				 			<img class="beer_pic" src="Pictures/Grim_blonde.png" />
 				        </div>
 
 				        <ul class="col-sm-5 detail_beer">

@@ -3,11 +3,11 @@
 		<meta charset="utf-8" />
 		<title>Beer'spot - Formulaire</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-		<link rel="stylesheet" href="registration.css"/>
-		<link rel="stylesheet" href="navbar.css"/>
-		<link rel="stylesheet" href="form.css"/>
-		<link rel="stylesheet" href="radio.css"/>
+		<link href="CSS/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="CSS/registration.css"/>
+		<link rel="stylesheet" href="CSS/navbar.css"/>
+		<link rel="stylesheet" href="CSS/form.css"/>
+		<link rel="stylesheet" href="CSS/radio.css"/>
 	</head>
 
 	<body>
@@ -50,28 +50,15 @@
 									<label class="radio_gender" for="female">Female</label>
 								</div>	
 
-
-
-
-						    	<button type="submit" class="btn_submit btn btn-lg btn-default" value="Enter">
+						    	<button type="submit" class="btn_enter btn btn-lg btn-default" value="Enter">
 						            <span class="glyphicon glyphicon-ok"></span> Enter
 						        </button>  
-
-
-
-								
-
-						        
 
 						    </form>	  
 						   
 					    </div>
 			    </div>
 			</div>
-
-
-			
-	      
 	    </div>
 		
 		<?php include("footer.php"); ?>
