@@ -9,10 +9,13 @@
         <p>TEST</p>
 
         <?php
-
             require_once("db.php");
-            insert_product($_POST['brand'],$_POST['product'],$_POST['price'], $_POST['volume'],$_POST['proof'],$_POST['color'],$_POST['country'],$_POST['picture_path'], $_POST['type'], $_POST['website']);
-         ?>
+            if ($_POST["new_beer"]) {
+                insert_product($_POST['brand'],$_POST['product'],$_POST['price'], $_POST['volume'],$_POST['proof'],$_POST['color'],$_POST['country'],$_POST['picture_path'], $_POST['type'], $_POST['website']);
+            } elseif ($_POST["udpate_beer"]) {
+                update_products($_POST['brand'],$_POST['product'],$_POST['price'], $_POST['volume'],$_POST['proof'],$_POST['color'],$_POST['country'],$_POST['picture_path'], $_POST['type'], $_POST['website']);
+            }
+            ?>
          <script>
             window.location.href = "index.php";
          </script>

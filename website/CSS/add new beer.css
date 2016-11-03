@@ -28,5 +28,21 @@ body {
 }
 
 .btn_enter {
-	margin-top: 3vh;
+	margin-top: 1vh;
+	display: block;
+	margin-left: 12vw;
+}
+
+form a {
+	color: white;
+}
+
+form h3 {
+	margin-bottom: 3vh;
+}
+
+.details_db {
+	max-height: 50vh;
+	color: white;
+	overflow: scroll;
 }

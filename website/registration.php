@@ -22,7 +22,7 @@
 
 						<div class="row registration_inside">
 							
-							<form action="index.html" method="POST">
+							<form action="index.php" method="POST">
 						        <p>
 						        	<label><input class="input-lg form-control" type="text" name="first_name" placeholder="First name"/></label>
 					        	</p>

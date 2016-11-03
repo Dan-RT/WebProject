@@ -90,8 +90,6 @@
 				<?php
 					if (isset($_POST['item_id'])) {
 						echo $_COOKIE['cart_items'];
-
-
 					}
 					include("overview_beer.php");
 				?>

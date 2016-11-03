@@ -22,7 +22,10 @@
 							<form class="form_inside" action="database_management.php" method="POST">
 
 								<p>[ADMIN ONLY]</p>
-						        <p>
+
+								<input type="hidden" name="choice_db" value="new_beer">
+
+								<p>
 						        	<label><input class="input-lg form-control" type="text" name="brand" placeholder="Brand"/></label>
 					        	</p>
 						        <p>
@@ -67,7 +70,9 @@
 									<label for="bottle">Bottle</label>
 									<input id="draught" type="radio" name="type" value="draught">
 									<label for="draught">Draught</label>
-								</div>	
+								</div>
+
+								<a href="update_beer.php">Update an existing beer</a>
 
 
 

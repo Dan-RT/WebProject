@@ -19,12 +19,12 @@
 						<div class="row form_inside">
 								  
 							
-							<form action="index.html" method="POST">
+							<form action="login_management.php" method="POST">
 						        <p>
-						        	<label><input class="input-lg form-control" type="name" name="id" placeholder="Insert your email"/></label>
+						        	<label><input class="input-lg form-control" name="user_name" placeholder="Insert your email"/></label>
 					        	</p>
 						        <p>
-						        	<label><input class="input-lg form-control" type="password" name="mdp" placeholder="Password"/></label>
+						        	<label><input class="input-lg form-control" name="password" placeholder="Password"/></label>
 						    	<p>
 
 						    	<button type="submit" class="btn_enter btn btn-lg btn-default" value="Enter">
