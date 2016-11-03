@@ -10,7 +10,10 @@
 		        <li class="active"> <a class="logo_site" href="index.php">BEER'SPOT</a> </li>
 		        <li class="first_element_nav" > <a href="index.php">Home</a> </li>
 		        <li> <a href="form.php">Your Account</a> </li>
-		        <li> <a href="cart.php">Cart</a> </li>
+				<li><h3><?php echo $_COOKIE['nb_items'];?></h3></li>
+		        <li>
+					<a href="cart.php">Cart</a>
+				</li>
 		        <li> <a href="add new beer.php">Add a Beer</a> </li>
 
 		        <form class="navbar-form navbar-right inline-form" style="margin-right: 5vw;">
