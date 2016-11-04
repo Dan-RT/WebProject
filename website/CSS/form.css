@@ -20,7 +20,7 @@
 
 .form_section {
 	margin-top: 15vh;
-	margin-bottom: 15vh;
+	margin-bottom: 17vh;
 }
 
 .form_inside_1 {
@@ -36,7 +36,7 @@
 
 .registration_section {
 	margin-top: 5vh;
-	margin-bottom: 5vh;
+	margin-bottom: 6.3vh
 }
 
 .registration_inside_1 {
@@ -49,11 +49,14 @@
 	padding-bottom: 3vh;
 }
 
+.admin_inside_1 {
+	padding-top: 3vh;
+	padding-bottom: 3vh;
+}
+
 .btn_enter {
 	margin-top: 3vh;
 }
-
-
 
 h5 {
 	color: white;
@@ -62,5 +65,29 @@ h5 {
 .login_failed {
 	padding: 0px;
 }
+
+.admin_links {
+	text-decoration: none;
+	color: white;
+}
+
+.admin_links:hover {
+	text-decoration: underline;
+	color: white;
+}
+
+.admin_section {
+	margin-top: 22.5vh;
+	margin-bottom: 22.5vh;
+}
+
+.admin_inside_1 p {
+	color: white;
+}
+
+
+
+
+
 
 

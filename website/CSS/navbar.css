@@ -19,7 +19,7 @@
 }
 
 .first_element_nav {
-	margin-left: 20vw;
+	margin-left: 29vw;
 }
 
 nav li a {
@@ -59,4 +59,16 @@ footer ul {
 	margin-bottom: 0vh;
 	margin-top: 0vh;
 	display: inline-block;
+}
+
+.user_name {
+	padding-top: 1.7vh;
+	margin-right: 1vh;
+	color: white;
+}
+
+
+.search_form, .logout_button {
+	display: inline-block;
+	margin-top: 1.5vh;
 }

@@ -1,6 +1,7 @@
 <?php
 
- 	$cart_items = null;
+
+	$cart_items = null;
 
 	if (isset($_POST['item_id'])) {
 		$productToAdd = $_POST['item_id'];
@@ -88,6 +89,7 @@
 		<div class="container-fullwidth container-fluid">
 			<div class="row">
 				<?php
+
 					if (isset($_POST['item_id'])) {
 						echo $_COOKIE['cart_items'];
 					}

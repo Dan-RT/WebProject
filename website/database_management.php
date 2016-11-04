@@ -13,14 +13,15 @@
 
             if ($_POST["choice_db"] == "new_beer") {
                 insert_product($_POST['brand'],$_POST['product'],$_POST['price'], $_POST['volume'],$_POST['proof'],$_POST['color'],$_POST['country'],$_POST['picture_path'], $_POST['type'], $_POST['website']);
-
             } elseif ($_POST["choice_db"] == "udpate_beer") {
-
                 update_products($_POST['id'], $_POST['brand'],$_POST['product'],$_POST['price'], $_POST['volume'],$_POST['proof'],$_POST['color'],$_POST['country'],$_POST['picture_path'], $_POST['type'], $_POST['website']);
+            } elseif ($_POST["choice_db"] == "delete_beer") {
+                query_database("DELETE FROM Beers WHERE id=?", $_POST['id']);
+            } else {
+                query_database("DROP TABLE test");
             }
             print("<script> window.location.href = \"index.php\"; </script>");
             ?>
-
 
     </body>
 </html>

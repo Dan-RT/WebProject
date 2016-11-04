@@ -13,7 +13,7 @@ body {
 
 .form_section {
 	margin-top: 7vh;
-	margin-bottom: 7vh;
+	margin-bottom: 27vh;
 }
 
 .form_inside_1 {
@@ -50,4 +50,12 @@ form h3 {
 
 .details_db h4 {
 	color: black;
+}
+
+.details_db_delete {
+	border: 2px solid #969696;
+	border-radius: 6px;
+	max-height: 50vh;
+	color: black;
+	overflow: scroll;
 }

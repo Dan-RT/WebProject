@@ -15,25 +15,23 @@
 		<div class="container-fullwidth container-fluid form_section">
 			<div class="row">
 				<div class="col-lg-offset-4 col-sm-4 form_inside_1">
+					<div class="row form_inside">
+						<form action="login_management.php" method="POST">
+							<input type="hidden" name="choice_login" value="login">
+							<p>
+								<label><input class="input-lg form-control" name="user_name" placeholder="User Name"/></label>
+							</p>
 
-						<div class="row form_inside">
-								  
-							
-							<form action="login_management.php" method="POST">
-						        <p>
-						        	<label><input class="input-lg form-control" name="user_name" placeholder="Insert your email"/></label>
-					        	</p>
-						        <p>
-						        	<label><input class="input-lg form-control" name="password" placeholder="Password"/></label>
-						    	<p>
+							<p>
+								<label><input class="input-lg form-control" name="password" placeholder="Password"/></label>
+							<p>
 
-						    	<button type="submit" class="btn_enter btn btn-lg btn-default" value="Enter">
-						            <span class="glyphicon glyphicon-ok"></span> Enter
-						        </button> 
-						        <p><a href="registration.php">Create your account</a></p> 
-						    </form>	  
-						   
-					    </div>
+							<button type="submit" class="btn_enter btn btn-lg btn-default" value="Enter">
+								<span class="glyphicon glyphicon-ok"></span> Enter
+							</button>
+							<p><a href="registration.php">Create your account</a></p>
+						</form>
+					</div>
 			    </div>
 			</div>
 
