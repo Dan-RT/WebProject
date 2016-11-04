@@ -8,6 +8,7 @@
                 $bdd = new PDO('mysql:host=localhost;dbname=BEER\'SPOT;charset=utf8', 'root', 'root');
                 $reponse = $bdd->query($SQLCommand);
 
+                /*  check for existing id   */
 
     /*
         $data = $reponse;
@@ -95,17 +96,41 @@
         }
 
 
-        $req = $bdd->prepare("UPDATE Beers SET Brand = :Brand, Product = :Product, Price = :Price, Volume = :Volume, Proof = :Proof, Color = :Color, Country : = Country, Picture_path :Picture_path, Website :Website WHERE id = :id");
+        echo "ID : " . $id . '<br />';
+        echo "Brand : " . $Brand . '<br />';
+        echo "Product : " . $Product . '<br />';
+        echo "Price : " . $Price . "$" . '<br />';
+        echo "Volume : " . $Volume . "L". '<br />';
+        echo "Proof : " . $Proof . '<br />';
+        echo "Color : " . $Color . '<br />';
+        echo "Picture path : " . $Picture . '<br />';
+        echo "Type : " . $Type . '<br />';
+        echo "Website : " . $Website . '<br />';
+
+
+        //$req = $bdd->prepare('UPDATE Beers SET Brand = :Brand WHERE id = :id');
+
+        $req = $bdd->prepare('UPDATE Beers SET  Brand = :Brand, 
+                                                Product = :Product, 
+                                                Price = :Price, 
+                                                Volume = :Volume, 
+                                                Proof = :Proof, 
+                                                Color = :Color, 
+                                                Country = :Country, 
+                                                Picture_path = :Picture_path, 
+                                                Website = :Website 
+                                                WHERE id = :id');
+
         $req->execute(array('Brand' => $Brand,
-            'Product' => $Product,
-            'Price' => $Price,
-            'Volume' => $Volume,
-            'Proof' => $Proof,
-            'Color' => $Color,
-            'Country' => $Country,
-            'Picture_path' => $Picture,
-            'Website' => $Website,
-            'id' => $id));
+                            'Product' => $Product,
+                            'Price' => $Price,
+                            'Volume' => $Volume,
+                            'Proof' => $Proof,
+                            'Color' => $Color,
+                            'Country' => $Country,
+                            'Picture_path' => $Picture,
+                            'Website' => $Website,
+                            'id' => $id));
 
         $req->closeCursor();
     }

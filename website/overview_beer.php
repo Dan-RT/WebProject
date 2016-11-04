@@ -8,8 +8,6 @@
 	$reponse = query_database('SELECT * FROM Beers ORDER BY id LIMIT 1 OFFSET $choice');
 	 */
 
-	$reponse = query_database('SELECT * FROM Beers');
-
 	while ($donnees = $reponse->fetch()) {
 		/*
 		  echo $donnees['Brand'] .'<br />';

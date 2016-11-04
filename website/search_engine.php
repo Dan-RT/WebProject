@@ -14,23 +14,31 @@
         <?php
         include("navbar.php");
         require_once("db.php");
-        ?>
 
+        echo $_POST["search"];
+        $reponse = query_database("SELECT * FROM Beers WHERE brand LIKE '%$_POST[search]%' ORDER BY id");
 
-        <div class="container-fullwidth container-fluid">
+        if (isset($reponse)) {
+            include("overview_beer.php");
+        } else {
+            //We don't enter here :(
+            ?>
 
-            <div class="row">
-                <p>
-                    TEST
-                </p>
+            <div class="col-lg-offset-1 col-sm-4 beer_overview">
+                <div class="row">
 
+                    <div class="col-sm-12">
+                        <h3>Beer Not found !</h3>
+                    </div>
+
+                </div>
             </div>
 
+            <?php
+        }
 
-        </div>
 
-
-        <?php include("footer.php"); ?>
+        include("footer.php"); ?>
 
     </body>
 </html>

@@ -15,7 +15,7 @@
 
 		<div class="container-fullwidth container-fluid form_section">
 			<div class="row">
-				<div class="col-lg-offset-4 col-sm-4 form_inside_1">
+				<div class="col-lg-offset-4 col-sm-4 col_form form_inside_1">
 
 						<div class="row form_inside_1">
 				

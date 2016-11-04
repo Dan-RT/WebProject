@@ -91,6 +91,7 @@
 					if (isset($_POST['item_id'])) {
 						echo $_COOKIE['cart_items'];
 					}
+					$reponse = query_database('SELECT * FROM Beers');
 					include("overview_beer.php");
 				?>
 			</div>

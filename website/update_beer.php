@@ -16,46 +16,44 @@
 <div class="container-fullwidth container-fluid form_section">
     <div class="row">
         <div class="col-lg-offset-1 col-sm-4 details_db">
-            <h2>Choose your product by giving its ID</h2>
+            <h4>Choose your product by giving its ID :</h4>
             <?php
                 require_once("db.php");
                 $reponse = query_database('SELECT * FROM Beers');
 
                 while ($donnees = $reponse->fetch()) {
-                    echo $donnees['id'] . '<br />';
-                    echo $donnees['Brand'] . '<br />';
-                    echo $donnees['Product'] . '<br />';
-                    echo $donnees['Price'] . '<br />';
-                    echo $donnees['Volume'] . '<br />';
-                    echo $donnees['Proof'] . '<br />';
-                    echo $donnees['Color'] . '<br />';
-                    echo $donnees['Picture_path'] . '<br />';
-                    echo $donnees['Type'] . '<br />';
-                    echo $donnees['Website'] . '<br />';
-                    echo $donnees['Date'] . '<br /><br /><br />';
+                    echo "ID : " . $donnees['id'] . '<br />';
+                    echo "Brand : " . $donnees['Brand'] . '<br />';
+                    echo "Product : " . $donnees['Product'] . '<br />';
+                    echo "Price : " . $donnees['Price'] . "$" . '<br />';
+                    echo "Volume : " . $donnees['Volume'] . "L". '<br />';
+                    echo "Proof : " . $donnees['Proof'] . '<br />';
+                    echo "Color : " . $donnees['Color'] . '<br />';
+                    echo "Picture path : " . $donnees['Picture_path'] . '<br />';
+                    echo "Type : " . $donnees['Type'] . '<br />';
+                    echo "Website : " . $donnees['Website'] . '<br />';
+                    echo "Date : " . $donnees['Date'] . '<br /><br />';
                 }
-
             ?>
-
-
         </div>
 
-        <div class="col-lg-offset-1 col-sm-4 form_inside_1">
+        <div class="col-lg-offset-1 col-sm-4 col_form form_inside_1">
 
             <div class="row form_inside_1">
 
                 <form class="form_inside" action="database_management.php" method="POST">
 
                     <h3>UPDATING BEER</h3>
+                    /*  Make required all inputs */
 
                     <input type="hidden" name="choice_db" value="udpate_beer">
 
                     <p>
-                        <label><input class="input-lg form-control" type="text" name="id" placeholder="ID"/></label>
+                        <label><input class="input-lg form-control" type="text" name="id" placeholder="ID" /></label>
                     </p>
 
                     <p>
-                        <label><input class="input-lg form-control" type="text" name="brand" placeholder="Brand"/></label>
+                        <label><input class="input-lg form-control" type="text" name="brand" placeholder="Brand" /></label>
                     </p>
                     <p>
                         <label><input class="input-lg form-control" type="text" name="product" placeholder="Product"/></label>

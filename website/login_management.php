@@ -2,7 +2,7 @@
 
     require_once("db.php");
 
-    /*  Remeber to make compulsory th efilling of th form, bog when nothing's written)  */
+    /*  Remember to make compulsory the filling of th form, bog when nothing's written  */
     if (isset($_POST['user_name'])) {
         $SQL_command = "SELECT * FROM Users WHERE user_name=?";
 
@@ -23,8 +23,6 @@
             }
             print ("<script> window.location.href = 'index.php';</script>");
         }
-    } else {
-
     }
 
     echo "Login failed";

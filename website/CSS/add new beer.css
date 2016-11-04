@@ -1,11 +1,10 @@
-[class*="col-"] {
-  background-color: #D85C48;
-  /*border: 2px solid black;
-  border-radius: 6px;*/
-  line-height: 40px;
-  text-align: center;
-  padding-top: 10vh;
-  padding-bottom: 10vh;
+
+.col_form {
+	background-color: #D85C48;
+	line-height: 40px;
+	text-align: center;
+	padding-top: 10vh;
+	padding-bottom: 10vh;
 }
 
 body {
@@ -42,7 +41,13 @@ form h3 {
 }
 
 .details_db {
-	max-height: 50vh;
-	color: white;
+	border: 2px solid #969696;
+	border-radius: 6px;
+	max-height: 123vh;
+	color: black;
 	overflow: scroll;
+}
+
+.details_db h4 {
+	color: black;
 }
