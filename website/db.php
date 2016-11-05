@@ -148,5 +148,40 @@
         }
 
     }
+
+function insert_user ($user_name, $email, $password) {
+
+    require_once("mail.php");
+    try {
+        $bdd = new PDO('mysql:host=localhost;dbname=BEER\'SPOT;charset=utf8', 'root', 'root');
+    } catch (Exception $e) {
+        die('Erreur : ' . $e->getMessage());
+    }
+
+
+    $req = $bdd->prepare('INSERT INTO Users (user_name, email, salt) 
+                VALUES(:user_name, :email, :salt)');
+    $req->execute(array('user_name' => $user_name,
+                        'email' => $email,
+                        'salt' => $password));
+
+    $text ="Welcome $user_name ! Thank's for joing us.</br></br>Remember :</br>if beer is not the answer, you are probably asking the wrong question.</br></br>Sincerely,</br></br>Beer'Spot";
+    $send = send_email($email, "Welcome", "Welcome in Beer'Spot !", $text);
+
+
+    $req->closeCursor();
+
+    return $send;
+
+
+}
+
+
+
+
+
+
+
 ?>
+
 

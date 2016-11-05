@@ -23,7 +23,7 @@
 							</p>
 
 							<p>
-								<label><input class="input-lg form-control" name="password" placeholder="Password"/></label>
+								<label><input type="password" class="input-lg form-control" name="password" placeholder="Password"/></label>
 							<p>
 
 							<button type="submit" class="btn_enter btn btn-lg btn-default" value="Enter">

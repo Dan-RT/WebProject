@@ -10,19 +10,24 @@
 </head>
 
     <body>
-
-        <?php
+<?php
         include("navbar.php");
         require_once("db.php");
 
-        echo $_POST["search"];
+        //echo $_POST["search"];
         $reponse = query_database("SELECT * FROM Beers WHERE brand LIKE '%$_POST[search]%' ORDER BY id");
 
         if (isset($reponse)) {
-            include("overview_beer.php");
+?>
+            <div class="container-fullwidth container-fluid">
+			    <div class="row">
+                  <?php include("overview_beer.php");?>
+                </div>
+            </div>
+<?php
         } else {
             //We don't enter here :(
-            ?>
+?>
 
             <div class="col-lg-offset-1 col-sm-4 beer_overview">
                 <div class="row">
@@ -34,11 +39,12 @@
                 </div>
             </div>
 
-            <?php
+<?php
         }
 
 
-        include("footer.php"); ?>
+        include("footer.php");
+?>
 
     </body>
 </html>

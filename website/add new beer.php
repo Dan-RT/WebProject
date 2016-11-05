@@ -21,8 +21,6 @@
 				
 							<form class="form_inside" action="database_management.php" method="POST">
 
-								<p>[ADMIN ONLY]</p>
-
 								<input type="hidden" name="choice_db" value="new_beer">
 
 								<p>

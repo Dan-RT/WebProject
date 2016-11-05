@@ -41,8 +41,9 @@
 
 					<?php print_add_button($donnees['id']); ?>
 
-					<a href="#" style="background-color: #D85C48; color : white" class="btn btn_details"><span
-							class="glyphicon glyphicon-list icon_detail"></span> More Details</a>
+					<a href="#" style="background-color: #D85C48; color : white" class="btn btn_details">
+						<span class="glyphicon glyphicon-list icon_detail"></span>More Details
+					</a>
 				</ul>
 
 			</div>
