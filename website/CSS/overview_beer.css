@@ -10,6 +10,7 @@ section {
  	color: black;
 	margin-bottom: 5vh;
  	text-align: center;
+	max-height: 40vh;
 }
 
 .beer_overview:hover {
@@ -44,8 +45,9 @@ body {
 	color: black;
 }
 
-
-
+img {
+	max-height: 40vh;
+}
 
 
 

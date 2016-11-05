@@ -24,43 +24,43 @@
 								<input type="hidden" name="choice_db" value="new_beer">
 
 								<p>
-						        	<label><input class="input-lg form-control" type="text" name="brand" placeholder="Brand"/></label>
+						        	<label><input class="input-lg form-control" type="text" name="brand" placeholder="Brand" required /></label>
 					        	</p>
 						        <p>
-						        	<label><input class="input-lg form-control" type="text" name="product" placeholder="Product"/></label>
+						        	<label><input class="input-lg form-control" type="text" name="product" placeholder="Product" required /></label>
 						    	<p>
 
 						    	<p>
-						        	<label><input class="input-lg form-control" type="text" name="price" placeholder="Price"/></label>
+						        	<label><input class="input-lg form-control" type="text" name="price" placeholder="Price" required /></label>
 						    	<p>
 
 						    	<p>
-						        	<label><input class="input-lg form-control" type="text" name="volume" placeholder="Volume"/></label>
+						        	<label><input class="input-lg form-control" type="text" name="volume" placeholder="Volume" required /></label>
 						    	<p>
 
 							    <p>
-						        	<label><input class="input-lg form-control" type="text" name="proof" placeholder="Proof"/></label>
+						        	<label><input class="input-lg form-control" type="text" name="proof" placeholder="Proof" required /></label>
 						    	<p>
 
 						    	<p>
-						        	<label><input class="input-lg form-control" type="text" name="color" placeholder="Color"/></label>
+						        	<label><input class="input-lg form-control" type="text" name="color" placeholder="Color" required/></label>
 						    	<p>
 
 						    	<p>
-						        	<label><input class="input-lg form-control" type="text" name="country" placeholder="Country"/></label>
+						        	<label><input class="input-lg form-control" type="text" name="country" placeholder="Country" required/></label>
 						    	<p>
 
 						    	<p>
-						        	<label><input class="input-lg form-control" type="text" name="picture_path" placeholder="Picture Name"/></label>
+						        	<label><input class="input-lg form-control" type="text" name="picture_path" placeholder="Picture Name" required /></label>
 						    	<p>
 
 
 
 						    	<p>
-						        	<label><input class="input-lg form-control" type="text" name="website" placeholder="Website"/></label>
+						        	<label><input class="input-lg form-control" type="text" name="website" placeholder="Website" required/></label>
 						    	<p>
 
-
+<!--
 						    	<div class="radio">
 									<input id="can" type="radio" name="type" value="can">
 									<label for="can">Can</label>
@@ -69,6 +69,7 @@
 									<input id="draught" type="radio" name="type" value="draught">
 									<label for="draught">Draught</label>
 								</div>
+								-->
 
 								<a href="update_beer.php">Update an existing beer</a>
 

@@ -46,9 +46,9 @@
             }
 */
             print("<script> window.location.href = \"index.php\"; </script>");
-            ?>
+
+        ?>
 
     </body>
 </html>
 
-$_POST['user_name'] $_POST['email'] $_POST['password']

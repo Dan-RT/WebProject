@@ -22,14 +22,20 @@
                 echo "User Name (form) : " . $_POST['user_name'] . "</br>";
                 echo "Password (form) : " . $_POST['password'] . "</br>";
                 echo "User Name (BDD) : " . $data['user_name'] . "</br>";
-                echo "Password (BDD) : " . $data['salt'] . "</br>";
+                echo "Salt (BDD) : " . $data['salt'] . "</br>";
+                echo "Encrypted passcode (BDD) : " . $data['hashcode'] . "</br>";
 
-                if (($data['user_name'] == $_POST['user_name']) && ($data['salt'] == $_POST['password'])) {
+                $encrypted_pw = crypt($_POST['password'], $data['salt']);
+
+                echo "Encrypted passcode (Site) : " . $encrypted_pw . "</br>";
+
+                if (($data['user_name'] == $_POST['user_name']) && ($data['hashcode'] == $encrypted_pw)) {
                     $_SESSION['user'] = $_POST['user_name'];
                     $_SESSION['logged_in'] = 1;
                     echo "Login success";
                     $flag = 0;
                 }
+
                 print ("<script> window.location.href = 'index.php';</script>");
             }
         }

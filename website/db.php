@@ -158,12 +158,19 @@ function insert_user ($user_name, $email, $password) {
         die('Erreur : ' . $e->getMessage());
     }
 
+    $salt = mcrypt_create_iv(32, MCRYPT_DEV_URANDOM);
+    $encrypted_pw = crypt($password, $salt);
 
-    $req = $bdd->prepare('INSERT INTO Users (user_name, email, salt) 
-                VALUES(:user_name, :email, :salt)');
+    echo $salt . "</br>";
+    echo $encrypted_pw . "</br>";
+
+
+    $req = $bdd->prepare('INSERT INTO Users (user_name, email, salt, hashcode) 
+                VALUES(:user_name, :email, :salt, :encrypted_pw)');
     $req->execute(array('user_name' => $user_name,
                         'email' => $email,
-                        'salt' => $password));
+                        'salt' => $salt,
+                        'encrypted_pw' => $encrypted_pw));
 
     $text ="Welcome $user_name ! Thank's for joing us.</br></br>Remember :</br>if beer is not the answer, you are probably asking the wrong question.</br></br>Sincerely,</br></br>Beer'Spot";
     $send = send_email($email, "Welcome", "Welcome in Beer'Spot !", $text);
