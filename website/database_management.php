@@ -20,6 +20,7 @@
                     break;
                 case "delete_beer" :
                     query_database("DELETE FROM Beers WHERE id=?", $_POST['id']);
+                    print("<script> window.location.href = \"delete_beer.php\"; </script>");
                     break;
                 case "new_user" :
                     insert_user($_POST['user_name'], $_POST['email'], $_POST['password']);

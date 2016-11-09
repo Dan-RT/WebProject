@@ -12,6 +12,7 @@
 <?php
 
 	session_start();
+
 	if (!isset($_SESSION['logged_in'])) {
 		echo "<li class='first_element_nav'><a href='form.php'>Login</a></li>";
 	} elseif ($_SESSION['logged_in'] == 1 && $_SESSION['user'] == "admin") {
@@ -19,12 +20,18 @@
 	} else {
 		echo "<li class='first_element_nav user_name'> " . $_SESSION['user'] . "</li>";
 	}
+
 		?>
 		<li><a href="index.php">Home</a></li>
-		<li>
-			<a href="cart.php">Cart <h4 class="nb_item"><?php echo "(" . $_COOKIE['nb_items'] . ")"; ?></h4></a>
-		</li>
 
+
+<?php
+	if ($_SESSION['nb_items'] > 0) {
+		echo "<li> <a href='cart.php'>Cart <h4 class='nb_item'>" . " (" . $_SESSION['nb_items'] . ")" . "</h4></a></li>";
+	} else {
+		echo "<li> <a href='cart.php'>Cart <h4 class='nb_item'>" . " (0)" . "</h4></a></li>";
+	}
+?>
 		<div class="navbar-form inline-form search_form">
 			<form method="POST" style="margin-bottom: 0vh;" action="search_engine.php">
 

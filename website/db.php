@@ -1,5 +1,7 @@
 <?php
 
+    require_once("db_validate_functions.php");
+
     function query_database($SQLCommand, $var = null) {
 
         if (!$var) {
@@ -38,7 +40,6 @@
                 $reponse->execute(array($var));
 
 
-
                 return $reponse;
 
                 /*
@@ -70,22 +71,29 @@
             die('Erreur : ' . $e->getMessage());
         }
 
+        $validation = validate_insertion($Brand, $Product, $Price, $Volume, $Proof, $Color, $Country, $Picture, $Type, $Website);
 
-        $req = $bdd->prepare('INSERT INTO Beers (Brand, Product, Price, Volume, Proof, Color, Country, Picture_path, Website) 
+        if ($validation == 1) {
+            $req = $bdd->prepare('INSERT INTO Beers (Brand, Product, Price, Volume, Proof, Color, Country, Picture_path, Website) 
         VALUES(:Brand, :Product, :Price, :Volume, :Proof, :Color, :Country, :Picture_path, :Website)');
-        $req->execute(array('Brand' => $Brand,
-                            'Product' => $Product,
-                            'Price' => $Price,
-                            'Volume' => $Volume,
-                            'Proof' => $Proof,
-                            'Color' => $Color,
-                            'Country' => $Country,
-                            'Picture_path' => $Picture,
-                            'Website' => $Website));
-
-        $req->closeCursor();
-
+            $req->execute(array('Brand' => $Brand,
+                'Product' => $Product,
+                'Price' => $Price,
+                'Volume' => $Volume,
+                'Proof' => $Proof,
+                'Color' => $Color,
+                'Country' => $Country,
+                'Picture_path' => $Picture,
+                'Website' => $Website));
+            $req->closeCursor();
+        } elseif ($validation == 0) {
+            die('Error : Missing items.');
+        } elseif ($validation == -1) {
+            die('Error : Wrong type.');
+        }
     }
+
+
 
     function update_products ($id, $Brand, $Product, $Price, $Volume, $Proof, $Color, $Country, $Picture, $Type, $Website) {
 

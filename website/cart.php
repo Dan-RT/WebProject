@@ -1,86 +1,72 @@
-<!DOCTYPE html>
+<?php
+	session_start();
+	$cart_item = null;
+
+	if (isset($_SESSION['cart_items'])) {
+		$cart_items = $_SESSION['cart_items'];
+	} elseif (isset($_COOKIE['cart_items'])) {
+		$cart_items = $_COOKIE['cart_items'];
+	}
+
+	if (isset($_POST['emptyCart'])) {
+		$_SESSION['cart_items'] = null;
+		$_SESSION['nb_items'] = null;
+		setCookie('cart_items', null, -1);
+		$cart_item = null;
+		print("<script> window.location.href = \"cart.php\"; </script>");
+	}
+?>
+
 <html>
 	<head>
-		
 		<meta charset="utf-8" />
-		<title>BEER'SPOT</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>Shopping Cart</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link href="CSS/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-		<link rel="stylesheet" href="CSS/index.css"/>
 		<link rel="stylesheet" href="CSS/navbar.css"/>
 		<link rel="stylesheet" href="CSS/overview_beer.css"/>
 	</head>
-
 	<body>
 
-		<?php include("navbar.php"); ?>
+	<?php
+		include("navbar.php");
+		require_once("db.php");
 
+		if (isset($cart_items)) {
 
+			$splitted_cart = split(",", $cart_items);
+			//print_r($splitted_cart);
+			$cart = array();
 
-		<div class="container-fullwidth container-fluid shopping_section">
+			foreach($splitted_cart as $itemId) {
+				if(array_key_exists($itemId, $cart)) {
+					$cart[$itemId]++;
+				} else {
+					$cart[$itemId] = 1;
+				}
+			}
+			//print_r($cart);
+			print ("<div class=\"container-fullwidth container-fluid\">
+							<div class=\"row\">");
+			foreach($cart as $key => $item) {
+				//echo $key.' -->'.$item."\n<br/>";
+				$reponse = query_database("SELECT * FROM Beers WHERE id=?", $key);
+				include("overview_beer.php");
+				echo "Quantity : " . $item;
+			}
+			print_r("	</div>
+					</div>");
 
-			<div class="choice" > 
-				<p>You choose :</p>
-			</div>
-			
-			
+			print("<form action='cart.php' method='post'>");
+			print("<input type='submit' name='emptyCart' value='Empty Cart'>");
+			print("</form>");
 
-			<div class="row" style="margin-top: 5vh;">
-				<div class="col-lg-offset-1 col-sm-4 beer_overview" data-toggle="modal" data-target="#myModal<?php echo $i; ?>">
-					<div class="row">
+		} else {
+			print("<h3>No product in shopping cart!</h3>");
+		}
 
-				 		<div class="col-sm-7">
-				 			<img class="beer_pic" src="Pictures/Grim_blonde.png" />
-				        </div>
-
-				        <ul class="col-sm-5 detail_beer">
-
-				        	<li>Grimbergen Blonde</li>
-				        	<li>3.00 $</li>
-				        	<li>0.33L</li>
-				        	<a href="#" class="btn "><span class="glyphicon glyphicon-list icon_detail"></span> More Details</a>
-				        </ul>
-
-
-
-				   	</div>
-				   	
-				</div>
-
-				<div class="col-lg-offset-1 col-sm-4 beer_overview" data-toggle="modal" data-target="#myModal<?php echo $i; ?>">
-					<div class="row">
-
-				 		<div class="col-sm-7">
-				 			<img class="beer_pic" src="Pictures/Grim_blonde.png" />
-				        </div>
-
-				        <ul class="col-sm-5 detail_beer">
-
-				        	<li>Grimbergen Blonde</li>
-				        	<li>3.00 $</li>
-				        	<li>0.33L</li>
-				        	<a href="#" class="btn "><span class="glyphicon glyphicon-list icon_detail"></span> More Details</a>
-				        </ul>
-
-
-
-				   	</div>
-				   	
-				</div>
-
-			</div>
-			<div class="pay_button" > 
-						<button type="submit" class="btn btn-lg btn-default" value="Enter">
-				            <a href="index.php"><span class="glyphicon glyphicon-ok"></span> Pay</a>
-				        </button>  
-					</div>
-			</div>
-
-
-		
-		<?php include("footer.php"); ?>
+		print("<br><br>Continue <a href='product_page.php'>shopping</a>...");
+	?>
 
 	</body>
 </html>
-
-

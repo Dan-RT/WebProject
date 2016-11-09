@@ -2,12 +2,6 @@
 
 	require_once("cart_function.php");
 
-	/* SELECT COUNT(*) FROM table
-	$choice = 0;
-	while ($choice < ) {
-	$reponse = query_database('SELECT * FROM Beers ORDER BY id LIMIT 1 OFFSET $choice');
-	 */
-
 	while ($donnees = $reponse->fetch()) {
 		/*
 		  echo $donnees['Brand'] .'<br />';
@@ -22,6 +16,7 @@
 		  echo $donnees['Date'] .'<br />';
 		  */
 		?>
+
 
 		<div class="col-lg-offset-1 col-sm-4 beer_overview" data-toggle="modal"
 			 data-target="#myModal<?php echo $i; ?>">
