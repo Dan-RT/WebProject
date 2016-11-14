@@ -49,5 +49,13 @@ img {
 	max-height: 40vh;
 }
 
+.add_sub_buttons {
+	display: inline-block;
+	margin-right: 1vw;
+}
 
+.quantity {
+	display: inline-block;
+	margin-right: 1vw;
+}
 

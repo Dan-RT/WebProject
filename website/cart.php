@@ -15,6 +15,67 @@
 		$cart_item = null;
 		print("<script> window.location.href = \"cart.php\"; </script>");
 	}
+
+    if (isset($_POST['item_id'])) {
+        $productToAdd = $_POST['item_id'];
+        //$expiration = time() + (60*60*24*7);
+
+        //Add cart item to session
+
+        if (isset($_SESSION['cart_items'])) {
+            //existing session variable
+            if ($_POST['add_sub_item'] == 'add_item'){
+                $cart_items = $_SESSION['cart_items'];
+                $cart_items = "$cart_items,$productToAdd";
+                $_SESSION['nb_items']++;
+
+            } elseif ($_POST['add_sub_item'] == 'sub_item') {
+
+                $cart_items = $_SESSION['cart_items'];
+                $splitted_cart = split(",", $cart_items);
+                $cart_items = null;
+
+                //print_r($splitted_cart);
+
+                $flag = 0;
+
+                foreach($splitted_cart as $item_tmp) {
+                    //echo "Post id = " . $_POST['item_id'] . "<br/>";
+                    //echo "item testé = " . $item_tmp . "<br/>";
+                    if ($cart_items) {
+                        if ($item_tmp == $_POST['item_id'] && $flag == 0) {
+                            $flag++;
+                            //echo "egalité correcte <br/> <br/>";
+                        } else {
+                            $cart_items = "$cart_items,$item_tmp";
+                            $_SESSION['nb_items']++;
+                            //echo "egalité fausse <br/><br/>";
+                        }
+                    } else {
+                        if ($item_tmp == $_POST['item_id'] && $flag == 0) {
+                            $flag++;
+                            //echo "new, egalité correcte <br/> <br/>";
+                        } else {
+                            $cart_items = "$item_tmp";
+                            $_SESSION['nb_items'] = 1;
+                            //echo "new, egalité fausse <br/><br/>";
+                        }
+
+                    }
+                    //print_r($cart_items);
+                }
+            }
+
+        } else {
+            $cart_items = "$productToAdd";
+            $_SESSION['nb_items'] = 1;
+        }
+
+        $_SESSION['cart_items'] = $cart_items;
+
+        print("<script> window.location.href = \"cart.php\"; </script>");
+    }
+
 ?>
 
 <html>
@@ -32,6 +93,8 @@
 		include("navbar.php");
 		require_once("db.php");
 
+
+
 		if (isset($cart_items)) {
 
 			$splitted_cart = split(",", $cart_items);
@@ -47,26 +110,42 @@
 			}
 			//print_r($cart);
 			print ("<div class=\"container-fullwidth container-fluid\">
-							<div class=\"row\">");
-			foreach($cart as $key => $item) {
+						<div class=\"row\">");
+			foreach($cart as $key => $quantity) {
 				//echo $key.' -->'.$item."\n<br/>";
 				$reponse = query_database("SELECT * FROM Beers WHERE id=?", $key);
+
+                $choice = 2;    //we can then choose what to display, add to cart button or + button
 				include("overview_beer.php");
-				echo "Quantity : " . $item;
 			}
 			print_r("	</div>
 					</div>");
+    ?>
+            <div class="row">
+                <div class="col-lg-offset-5 col-lg-4">
+                    <form action='cart.php' method='post'>
+                        <input type='hidden' name='emptyCart' value='Empty Cart'>
+                        <button type='submit' class="btn btn-primary btn-default">
+                            <span class="glyphicon glyphicon-trash"></span> Empty Cart
+                        </button>
 
-			print("<form action='cart.php' method='post'>");
-			print("<input type='submit' name='emptyCart' value='Empty Cart'>");
-			print("</form>");
+                    </form>
+                </div>
+            </div>
+    <?php
 
 		} else {
-			print("<h3>No product in shopping cart!</h3>");
+    ?>
+            <div class="row">
+                <div class="col-lg-offset-4 col-lg-4">
+                    <h3>No product in shopping cart!</h3>
+                </div>
+            </div>
+    <?php
 		}
+    ?>
 
-		print("<br><br>Continue <a href='product_page.php'>shopping</a>...");
-	?>
+
 
 	</body>
 </html>

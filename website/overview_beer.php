@@ -34,7 +34,13 @@
 					<li><?php echo $donnees['Price'] . " $"; ?></li>
 					<li><?php echo $donnees['Volume'] . " L"; ?></li>
 
-					<?php print_add_button($donnees['id']); ?>
+					<?php
+						if($choice == 1) {
+							print_add_button($donnees['id'], $quantity);
+						} elseif ($choice == 2) {
+							print_plus_button($donnees['id'], $quantity);
+						}
+					 ?>
 
 					<a href="#" style="background-color: #D85C48; color : white" class="btn btn_details">
 						<span class="glyphicon glyphicon-list icon_detail"></span>More Details

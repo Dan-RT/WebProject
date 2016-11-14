@@ -18,7 +18,6 @@
         }
 
         $_SESSION['cart_items'] = $cart_items;
-        setcookie("cart_items", $cart_items, $expiration);
 
         print("<script> window.location.href = \"index.php\"; </script>");
 	}
@@ -57,6 +56,7 @@
 						echo $_COOKIE['cart_items'];
 					}
 					$reponse = query_database('SELECT * FROM Beers');
+					$choice = 1;
 					include("overview_beer.php");
 				?>
 			</div>
