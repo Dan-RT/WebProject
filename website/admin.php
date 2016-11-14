@@ -27,12 +27,6 @@
                 <div class="row">
                     <a class="admin_links" href="delete_user.php"><p></p>DELETE A USER</a>
                 </div>
-                <div class="row">
-                    <a class="admin_links" href="database_management.php"><p></p>DROP TABLE *</a>
-                </div>
-                <div class="row">
-                    <p>(*not to destroy everything, the table deleted is a test one)</p>
-                </div>
             </div>
         </div>
 

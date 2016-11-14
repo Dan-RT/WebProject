@@ -11,22 +11,7 @@
                 $reponse = $bdd->query($SQLCommand);
 
                 /*  check for existing id   */
-
-    /*
-        $data = $reponse;
-
-        if ($data->fetch() != null) {
             return $reponse;
-        } else {
-            return null;
-        }
-
-        if ($reponse != null) {
-            return $reponse;
-        } else {
-            return null;
-        }
-    */          return $reponse;
             } catch (Exception $e) {
                 die('Erreur : ' . $e->getMessage());
             }
@@ -39,20 +24,7 @@
                 $reponse = $bdd->prepare($SQLCommand);
                 $reponse->execute(array($var));
 
-
                 return $reponse;
-
-                /*
-                $data = $reponse;
-
-                if ($data->fetch() != null) {
-                    return $reponse;
-                } else {
-                    echo "TEST";
-                    return null;
-                }
-                */
-
             } catch (Exception $e) {
                 die('Erreur : ' . $e->getMessage());
             }
@@ -71,7 +43,7 @@
             die('Erreur : ' . $e->getMessage());
         }
 
-        $validation = validate_insertion($Brand, $Product, $Price, $Volume, $Proof, $Color, $Country, $Picture, $Type, $Website);
+        $validation = 1; //validate_insertion($Brand, $Product, $Price, $Volume, $Proof, $Color, $Country, $Picture, $Type, $Website);
 
         if ($validation == 1) {
             $req = $bdd->prepare('INSERT INTO Beers (Brand, Product, Price, Volume, Proof, Color, Country, Picture_path, Website) 

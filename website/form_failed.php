@@ -29,7 +29,7 @@
                             <p>
                                 <label><input class="input-lg form-control" name="password" placeholder="Password"/></label>
                             <p>
-                            <h5>Login information false, please try again</h5>
+
                             <button type="submit" class="btn_enter btn btn-lg btn-default" value="Enter">
                                 <span class="glyphicon glyphicon-ok"></span> Enter
                             </button>

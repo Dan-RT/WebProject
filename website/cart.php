@@ -121,31 +121,58 @@
 			print_r("	</div>
 					</div>");
     ?>
+        <div class="container-fullwidth container-fluid">
             <div class="row">
-                <div class="col-lg-offset-5 col-lg-4">
-                    <form action='cart.php' method='post'>
-                        <input type='hidden' name='emptyCart' value='Empty Cart'>
-                        <button type='submit' class="btn btn-primary btn-default">
-                            <span class="glyphicon glyphicon-trash"></span> Empty Cart
-                        </button>
-
-                    </form>
+                <div class="col-lg-offset-4 col-lg-4 payment_overview">
+                    <?php total_price($cart_items); ?>
+                    <div class="col-lg-12">
+                        <div class="col-lg-offset-2 col-lg-2">
+                    <?php if($_SESSION['logged_in'] == 1){ ?>
+                            <a href="https://www.paypal.com">
+                                <button type='submit' class="btn btn-primary btn-default">
+                                    <span class="glyphicon glyphicon-shopping-cart"></span> Pay
+                                </button>
+                            </a>
+                    <?php } else {  ?>
+                            <form action='form.php' method='post'>
+                                <input type='hidden' name='payment' value=1>
+                                <button type='submit' class="btn btn-primary btn-default">
+                                    <span class="glyphicon glyphicon-shopping-cart"></span> Pay
+                                </button>
+                            </form>
+                    <?php }  ?>
+                        </div>
+                        <div class="col-lg-offset-2 col-lg-1">
+                            <form action='cart.php' method='post'>
+                                <input type='hidden' name='emptyCart' value='Empty Cart'>
+                                <button type='submit' class="btn btn-primary btn-default">
+                                    <span class="glyphicon glyphicon-trash"></span> Empty Cart
+                                </button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </div>
+
+
+
     <?php
 
 		} else {
     ?>
+        <div class="container-fullwidth container-fluid">
             <div class="row">
                 <div class="col-lg-offset-4 col-lg-4">
                     <h3>No product in shopping cart!</h3>
                 </div>
             </div>
+        </div>
     <?php
 		}
     ?>
 
 
-
+    <?php include("footer.php"); ?>
 	</body>
 </html>

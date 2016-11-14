@@ -1,3 +1,54 @@
+<script>
+	function validateForm() {
+		var x = document.forms["form"]["brand"].value;
+		if (x == null || x == "") {
+			alert("All fields must be filled out");
+			return false;
+		}
+		x = document.forms["form"]["product"].value;
+		if (x == null || x == "") {
+			alert("All fields must be filled out");
+			return false;
+		}
+		x = document.forms["form"]["price"].value;
+		if (x == null || x == "") {
+			alert("All fields must be filled out");
+			return false;
+		}
+		x = document.forms["form"]["volume"].value;
+		if (x == null || x == "") {
+			alert("All fields must be filled out");
+			return false;
+		}
+		x = document.forms["form"]["proof"].value;
+		if (x == null || x == "") {
+			alert("All fields must be filled out");
+			return false;
+		}
+		x = document.forms["form"]["color"].value;
+		if (x == null || x == "") {
+			alert("All fields must be filled out");
+			return false;
+		}
+		x = document.forms["form"]["country"].value;
+		if (x == null || x == "") {
+			alert("All fields must be filled out");
+			return false;
+		}
+		x = document.forms["form"]["picture_path"].value;
+		if (x == null || x == "") {
+			alert("All fields must be filled out");
+			return false;
+		}
+		x = document.forms["form"]["website"].value;
+		if (x == null || x == "") {
+			alert("All fields must be filled out");
+			return false;
+		}
+	}
+</script>
+
+
 <html>
 	<head>
 		<meta charset="utf-8" />
@@ -19,7 +70,7 @@
 
 						<div class="row form_inside_1">
 				
-							<form class="form_inside" action="database_management.php" method="POST">
+							<form name="form" class="form_inside" action="database_management.php" method="POST" onsubmit="return validateForm()">
 
 								<input type="hidden" name="choice_db" value="new_beer">
 
@@ -28,37 +79,37 @@
 					        	</p>
 						        <p>
 						        	<label><input class="input-lg form-control" type="text" name="product" placeholder="Product" required /></label>
-						    	<p>
+								</p>
 
 						    	<p>
 						        	<label><input class="input-lg form-control" type="text" name="price" placeholder="Price" required /></label>
-						    	<p>
+								</p>
 
 						    	<p>
 						        	<label><input class="input-lg form-control" type="text" name="volume" placeholder="Volume" required /></label>
-						    	<p>
+								</p>
 
 							    <p>
 						        	<label><input class="input-lg form-control" type="text" name="proof" placeholder="Proof" required /></label>
-						    	<p>
+								</p>
 
 						    	<p>
 						        	<label><input class="input-lg form-control" type="text" name="color" placeholder="Color" required/></label>
-						    	<p>
+								</p>
 
-						    	<p>
+								<p>
 						        	<label><input class="input-lg form-control" type="text" name="country" placeholder="Country" required/></label>
-						    	<p>
+						    	</p>
 
 						    	<p>
 						        	<label><input class="input-lg form-control" type="text" name="picture_path" placeholder="Picture Name" required /></label>
-						    	<p>
+						    	</p>
 
 
 
 						    	<p>
 						        	<label><input class="input-lg form-control" type="text" name="website" placeholder="Website" required/></label>
-						    	<p>
+						    	</p>
 
 <!--
 						    	<div class="radio">

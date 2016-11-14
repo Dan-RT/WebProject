@@ -1,3 +1,13 @@
+<script>
+    function validateForm() {
+        var x = document.forms["form"]["id"].value;
+        if (x == null || x == "") {
+            alert("All fields must be filled out");
+            return false;
+        }
+    }
+</script>
+
 <html>
 <head>
     <meta charset="utf-8" />
@@ -41,10 +51,9 @@
 
             <div class="row form_inside_1">
 
-                <form class="form_inside" action="database_management.php" method="POST">
+                <form name="form" class="form_inside" action="database_management.php" method="POST" onsubmit="return validateForm()">
 
                     <h3>DELETING BEER</h3>
-                    /*  Make required all inputs */
 
                     <input type="hidden" name="choice_db" value="delete_beer">
 

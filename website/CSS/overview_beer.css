@@ -59,3 +59,13 @@ img {
 	margin-right: 1vw;
 }
 
+.payment_overview {
+	background-color: #e5e5e5;
+	border: 2px solid #898989;
+	border-radius: 6px;
+	line-height: 40px;
+	color: black;
+	margin-bottom: 5vh;
+	text-align: center;
+}
+

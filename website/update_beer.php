@@ -1,3 +1,59 @@
+<script>
+    function validateForm() {
+        var x = document.forms["form"]["id"].value;
+        if (x == null || x == "") {
+            alert("All fields must be filled out");
+            return false;
+        }
+        x = document.forms["form"]["brand"].value;
+        if (x == null || x == "") {
+            alert("All fields must be filled out");
+            return false;
+        }
+        x = document.forms["form"]["product"].value;
+        if (x == null || x == "") {
+            alert("All fields must be filled out");
+            return false;
+        }
+        x = document.forms["form"]["price"].value;
+        if (x == null || x == "") {
+            alert("All fields must be filled out");
+            return false;
+        }
+        x = document.forms["form"]["volume"].value;
+        if (x == null || x == "") {
+            alert("All fields must be filled out");
+            return false;
+        }
+        x = document.forms["form"]["proof"].value;
+        if (x == null || x == "") {
+            alert("All fields must be filled out");
+            return false;
+        }
+        x = document.forms["form"]["color"].value;
+        if (x == null || x == "") {
+            alert("All fields must be filled out");
+            return false;
+        }
+        x = document.forms["form"]["country"].value;
+        if (x == null || x == "") {
+            alert("All fields must be filled out");
+            return false;
+        }
+        x = document.forms["form"]["picture_path"].value;
+        if (x == null || x == "") {
+            alert("All fields must be filled out");
+            return false;
+        }
+        x = document.forms["form"]["website"].value;
+        if (x == null || x == "") {
+            alert("All fields must be filled out");
+            return false;
+        }
+    }
+</script>
+
+
 <html>
     <head>
         <meta charset="utf-8" />
@@ -41,10 +97,9 @@
 
                 <div class="row form_inside_1">
 
-                    <form class="form_inside" action="database_management.php" method="POST">
+                    <form name="form" class="form_inside" action="database_management.php" method="POST" onsubmit="return validateForm()">
 
                         <h3>UPDATING BEER</h3>
-                        /*  Make required all inputs */
 
                         <input type="hidden" name="choice_db" value="udpate_beer">
 
@@ -55,38 +110,40 @@
                         <p>
                             <label><input class="input-lg form-control" type="text" name="brand" placeholder="Brand" /></label>
                         </p>
+
                         <p>
                             <label><input class="input-lg form-control" type="text" name="product" placeholder="Product"/></label>
-                        <p>
+                        </p>
 
                         <p>
                             <label><input class="input-lg form-control" type="text" name="price" placeholder="Price"/></label>
-                        <p>
+                        </p>
 
                         <p>
                             <label><input class="input-lg form-control" type="text" name="volume" placeholder="Volume"/></label>
-                        <p>
+                        </p>
 
                         <p>
                             <label><input class="input-lg form-control" type="text" name="proof" placeholder="Proof"/></label>
-                        <p>
+                        </p>
 
                         <p>
                             <label><input class="input-lg form-control" type="text" name="color" placeholder="Color"/></label>
-                        <p>
+                        </p>
 
                         <p>
                             <label><input class="input-lg form-control" type="text" name="country" placeholder="Country"/></label>
-                        <p>
+                        </p>
 
                         <p>
                             <label><input class="input-lg form-control" type="text" name="picture_path" placeholder="Picture Name"/></label>
-                        <p>
+                        </p>
 
                         <p>
                             <label><input class="input-lg form-control" type="text" name="website" placeholder="Website"/></label>
-                        <p>
+                        </p>
 
+                        <!--
                         <div class="radio">
                             <input id="can" type="radio" name="type" value="can">
                             <label for="can">Can</label>
@@ -95,6 +152,7 @@
                             <input id="draught" type="radio" name="type" value="draught">
                             <label for="draught">Draught</label>
                         </div>
+                        -->
 
                         <button style="margin-top: 3vh;" type="submit" class="btn_enter btn btn-lg btn-default" value="Enter">
                             <span class="glyphicon glyphicon-ok"></span> Enter

@@ -38,8 +38,9 @@
 						if($choice == 1) {
 							print_add_button($donnees['id'], $quantity);
 						} elseif ($choice == 2) {
-							print_plus_button($donnees['id'], $quantity);
+							print_plus_button($donnees['id'], $quantity, $donnees['Price']);
 						}
+
 					 ?>
 
 					<a href="#" style="background-color: #D85C48; color : white" class="btn btn_details">

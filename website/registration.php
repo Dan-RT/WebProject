@@ -1,3 +1,48 @@
+
+<script>
+	function samePassword() {
+
+		var password_1 = document.getElementById("password").value;
+		var password_2 = document.getElementById("confirm_password").value;
+
+		if(password_1 == password_2) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	function validateForm() {
+		var x = document.forms["form"]["user_name"].value;
+		if (x == null || x == "") {
+			alert("All fields must be filled out");
+			return false;
+		}
+		var x = document.forms["form"]["email"].value;
+		if (x == null || x == "") {
+			alert("All fields must be filled out");
+			return false;
+		}
+		var x = document.forms["form"]["password"].value;
+		if (x == null || x == "") {
+			alert("All fields must be filled out");
+			return false;
+		}
+		var x = document.forms["form"]["confirm_password"].value;
+		if (x == null || x == "") {
+			alert("All fields must be filled out");
+			return false;
+		}
+		if(!samePassword()) {
+			alert("Please enter the same password twice.");
+			return false;
+		}
+	}
+
+</script>
+
+
+
 <html>
 	<head>
 		<meta charset="utf-8" />
@@ -22,7 +67,7 @@
 
 						<div class="row registration_inside">
 							
-							<form action="database_management.php" method="POST">
+							<form name="form" action="database_management.php" method="POST" onsubmit="return validateForm()">
 
 								<input type="hidden" name="choice_db" value="new_user">
 						        <p>
@@ -34,11 +79,11 @@
 						    	<p>
 
 						    	<p>
-							        <label><input class="input-lg form-control" type="password" name="password" placeholder="Choose a password"/></label>
+							        <label><input id="password" class="input-lg form-control" type="password" name="password" placeholder="Choose a password"/></label>
 							    <p>	
 
 							    <p>
-							        <label><input class="input-lg form-control" type="password" name="password" placeholder="Repeat your password"/></label>
+							        <label><input id="confirm_password" class="input-lg form-control" type="password" name="confirm_password" placeholder="Repeat your password"/></label>
 							    <p>	
 
 	<!--

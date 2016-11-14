@@ -15,7 +15,7 @@
 
     }
 
-    function print_plus_button ($item_id, $quantity) {
+    function print_plus_button ($item_id, $quantity, $price) {
         //echo $item_id;
 
         print("<form action='cart.php' method='POST' class='add_sub_buttons'>   <!-- changer pour un truc current page -->
@@ -37,7 +37,31 @@
                          <span class='glyphicon glyphicon-minus'></span>
                     </button>
                </form>");
+
+        print("<div class='row'>
+                    <div style='margin-left: 1vw;'>");
+        echo 'Total Product Price : ' . $quantity*$price . "$";
+        print("     </div>
+               </div>");
     }
+
+
+    function total_price ($cart_items) {
+
+        $splitted_cart = split(",", $cart_items);
+        $total_price = 0;
+
+        foreach($splitted_cart as $itemId) {
+            $response = query_database("SELECT * FROM Beers WHERE id=?", $itemId);
+            while ($data = $response->fetch()) {
+                //echo $data["Brand"] . " " . $data["Product"] . " " . $data["Price"] . "$". "<br/>";
+                $total_price = $total_price + $data["Price"];
+            }
+        }
+        print("<div>Total Price :  $total_price $</div>");
+
+    }
+
 ?>
 
 

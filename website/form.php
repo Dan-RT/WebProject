@@ -1,3 +1,19 @@
+<script>
+	function validateForm() {
+		var x = document.forms["form"]["user_name"].value;
+		if (x == null || x == "") {
+			alert("All fields must be filled out");
+			return false;
+		}
+		x = document.forms["form"]["password"].value;
+		if (x == null || x == "") {
+			alert("All fields must be filled out");
+			return false;
+		}
+	}
+</script>
+
+
 <html>
 	<head>
 		<meta charset="utf-8" />
@@ -16,7 +32,10 @@
 			<div class="row">
 				<div class="col-lg-offset-4 col-sm-4 form_inside_1">
 					<div class="row form_inside">
-						<form action="login_management.php" method="POST">
+						<form name="form" action="login_management.php" method="POST" onsubmit="return validateForm()">
+						<?php if($_POST["payment"] == 1) {	?>
+							<input type='hidden' name='payment' value=1>
+						<?php } ?>
 							<input type="hidden" name="choice_login" value="login">
 							<p>
 								<label><input class="input-lg form-control" name="user_name" placeholder="User Name"/></label>

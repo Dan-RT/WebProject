@@ -31,11 +31,6 @@
                 case "delete_user" :
                     query_database("DELETE FROM Users WHERE id=?", $_POST['id']);
                     break;
-
-                default :
-                    query_database("DROP TABLE test");
-                    break;
-
             }
 /*
             if ($_POST["choice_db"] == "new_beer") {
