@@ -1,0 +1,93 @@
+[class*="col-"] {
+  background-color: #D85C48;
+  /*border: 2px solid black;
+  border-radius: 6px;*/
+  line-height: 40px;
+  text-align: center;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+}
+
+
+.btn {
+	background-color: white;
+}
+
+.form_inside a {
+	color: white;
+	text-decoration: underline;
+}
+
+.form_section {
+	margin-top: 15vh;
+	margin-bottom: 17vh;
+}
+
+.form_inside_1 {
+	padding-top: 0vh;
+	padding-bottom: 0vh;
+}
+
+.form_inside {
+	padding-top: 11vh;
+	padding-bottom: 5vh;
+}
+
+
+.registration_section {
+	margin-top: 13.6vh;
+	margin-bottom: 13.6vh
+}
+
+.registration_inside_1 {
+	padding-top: 0vh;
+	padding-bottom: 0vh;
+}
+
+.registration_inside {
+	padding-top: 7vh;
+	padding-bottom: 3vh;
+}
+
+.admin_inside_1 {
+	padding-top: 3vh;
+	padding-bottom: 3vh;
+}
+
+.btn_enter {
+	margin-top: 3vh;
+}
+
+h5 {
+	color: white;
+}
+
+.login_failed {
+	padding: 0px;
+}
+
+.admin_links {
+	text-decoration: none;
+	color: white;
+}
+
+.admin_links:hover {
+	text-decoration: underline;
+	color: white;
+}
+
+.admin_section {
+	margin-top: 19vh;
+	margin-bottom: 19vh;
+}
+
+.admin_inside_1 p {
+	color: white;
+}
+
+
+
+
+
+
+

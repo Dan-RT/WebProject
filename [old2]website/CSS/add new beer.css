@@ -1,0 +1,61 @@
+
+.col_form {
+	background-color: #D85C48;
+	line-height: 40px;
+	text-align: center;
+	padding-top: 10vh;
+	padding-bottom: 10vh;
+}
+
+body {
+	color: white;
+}
+
+.form_section {
+	margin-top: 7vh;
+	margin-bottom: 27vh;
+}
+
+.form_inside_1 {
+	padding-top: 0vh;
+	padding-bottom: 0vh;
+}
+
+.form_inside {
+	padding-top: 4vh;
+	padding-bottom: 4vh;
+}
+
+.btn_enter {
+	margin-top: 1vh;
+	display: block;
+	margin-left: 12vw;
+}
+
+form a {
+	color: white;
+}
+
+form h3 {
+	margin-bottom: 3vh;
+}
+
+.details_db {
+	border: 2px solid #969696;
+	border-radius: 6px;
+	max-height: 123vh;
+	color: black;
+	overflow: scroll;
+}
+
+.details_db h4 {
+	color: black;
+}
+
+.details_db_delete {
+	border: 2px solid #969696;
+	border-radius: 6px;
+	max-height: 50vh;
+	color: black;
+	overflow: scroll;
+}

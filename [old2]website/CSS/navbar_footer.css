@@ -1,0 +1,59 @@
+
+
+.btn {
+	background-color: white;
+  	color: black;
+}
+
+.navbar-fixed-top {
+	background-color: #D85C48;
+}
+
+.nav {
+	font-size: large;
+}
+
+.logo_site {
+	font-size: x-large;
+	margin-left: 6vw;
+}
+
+.first_element_nav {
+	margin-left: 23vw;
+}
+
+nav li a {
+	color: white;
+}
+
+
+
+footer {
+	background-color: #969696;
+	color: white;
+	margin-top: 3vh;
+	padding-top: 3vh;
+	padding-bottom: 3vh;
+}
+
+footer ul {
+	margin-bottom: 0vh;
+	margin-left: 25vw;
+}
+
+.footer_list li {
+	display : inline;
+	margin-right: 3vw;
+}
+
+.tab {
+	margin-left: 2vw;
+	display: inline;
+}
+
+h4 {
+	display: inline-block;
+}
+
+
+

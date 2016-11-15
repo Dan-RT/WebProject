@@ -1,0 +1,24 @@
+
+
+[class*="col-"] {
+  background-color: #D85C48;
+  /*border: 2px solid black;
+  border-radius: 6px;*/
+  line-height: 40px;
+  text-align: center;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+}
+
+.btn {
+	background-color: white;
+}
+
+.form_section {
+	margin-top: 7vh;
+}
+
+.btn_enter {
+	margin-top: 3vh;
+}
+
