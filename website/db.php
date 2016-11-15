@@ -75,7 +75,7 @@
             die('Erreur : ' . $e->getMessage());
         }
 
-
+/*
         echo "ID : " . $id . '<br />';
         echo "Brand : " . $Brand . '<br />';
         echo "Product : " . $Product . '<br />';
@@ -86,10 +86,7 @@
         echo "Picture path : " . $Picture . '<br />';
         echo "Type : " . $Type . '<br />';
         echo "Website : " . $Website . '<br />';
-
-
-        //$req = $bdd->prepare('UPDATE Beers SET Brand = :Brand WHERE id = :id');
-
+*/
         $req = $bdd->prepare('UPDATE Beers SET  Brand = :Brand, 
                                                 Product = :Product, 
                                                 Price = :Price, 

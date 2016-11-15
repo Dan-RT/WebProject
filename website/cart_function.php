@@ -1,11 +1,11 @@
 <?php
 
 
-    function print_add_button ($item_id, $quantity) {
+    function print_add_button ($item_id, $quantity = null) {
 
         //echo $item_id;
 
-        print ("<form action='index.php' method='POST'>   <!-- changer pour un truc current page -->
+        print ("<form style='margin-top: 2vh;' action='index.php' method='POST'>   <!-- changer pour un truc current page -->
                     <input type='hidden' name='item_id' value='$item_id'>
                     <button type='submit' class='btn btn-default'>
                         <span class='glyphicon glyphicon-shopping-cart'> </span>
@@ -40,7 +40,7 @@
 
         print("<div class='row'>
                     <div style='margin-left: 1vw;'>");
-        echo 'Total Product Price : ' . $quantity*$price . "$";
+        echo 'Product Price : ' . $quantity*$price . "$";
         print("     </div>
                </div>");
     }

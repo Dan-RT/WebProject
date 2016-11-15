@@ -134,7 +134,7 @@
                     <?php } else {  ?>
                             <form action='form.php' method='post'>
                                 <input type='hidden' name='payment' value=1>
-                                <button type='submit' class="btn btn-primary btn-default">
+                                <button type='submit' class="btn btn-default">
                                     <span class="glyphicon glyphicon-shopping-cart"></span> Pay
                                 </button>
                             </form>
@@ -143,7 +143,7 @@
                         <div class="col-lg-offset-2 col-lg-1">
                             <form action='cart.php' method='post'>
                                 <input type='hidden' name='emptyCart' value='Empty Cart'>
-                                <button type='submit' class="btn btn-primary btn-default">
+                                <button type='submit' class="btn  btn-default">
                                     <span class="glyphicon glyphicon-trash"></span> Empty Cart
                                 </button>
                             </form>

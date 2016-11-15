@@ -16,7 +16,7 @@ function send_email($to, $subject, $body)
 	//   you should create yourself a dummy email address at gmail
 	// - You will need to verify by sms your email to be able to
 	//   use Gmail's SMTP server
-	$from_name = "Your Name";
+	$from_name = "Daniel Regnard";
 	$mail->Username = "test.concordia.webproject@gmail.com";  //bullshit address
 	$mail->Password = "password12345678";
 

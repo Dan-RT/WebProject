@@ -6,13 +6,15 @@
 <!-- Modal -->
 
 
-<div class="modal fade" id="myModal<?php echo $i; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+
+
+<div class="modal fade" id="myModal<?php echo $donnees['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
 
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel" style="color:black;"><?php echo $i; ?></h4>
+                <h4 class="modal-title" id="myModalLabel" style="color:black;"><?php echo $donnees['id']; ?></h4>
             </div>
 
             <div class="modal-body">
@@ -49,12 +51,3 @@
         </div>
     </div>
 </div>
-
-
-<?php
-    }
-
-    $reponse->closeCursor();
-
-?>
-

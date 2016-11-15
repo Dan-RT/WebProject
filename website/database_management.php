@@ -6,9 +6,9 @@
         <meta charset="utf-8" />
     </head>
     <body>
+        <div>
 
-
-        <?php
+            <?php
             require_once("db.php");
 
             switch ($_POST["choice_db"]) {
@@ -17,6 +17,7 @@
                     break;
                 case "udpate_beer" :
                     update_products($_POST['id'], $_POST['brand'],$_POST['product'],$_POST['price'], $_POST['volume'],$_POST['proof'],$_POST['color'],$_POST['country'],$_POST['picture_path'], $_POST['type'], $_POST['website']);
+                    print("<script> window.location.href = \"update_beer.php\"; </script>");
                     break;
                 case "delete_beer" :
                     query_database("DELETE FROM Beers WHERE id=?", $_POST['id']);
@@ -30,20 +31,17 @@
                     break;
                 case "delete_user" :
                     query_database("DELETE FROM Users WHERE id=?", $_POST['id']);
+                    print("<script> window.location.href = \"delete_user.php\"; </script>");
+
                     break;
             }
-/*
-            if ($_POST["choice_db"] == "new_beer") {
-                } elseif ($_POST["choice_db"] == "udpate_beer") {
-                } elseif ($_POST["choice_db"] == "delete_beer") {
-                } elseif ($_POST["choice_db"] == "new_user") {
-                } else {
-
-            }
-*/
             print("<script> window.location.href = \"index.php\"; </script>");
 
-        ?>
+            ?>
+        </div>
+
+
+
 
     </body>
 </html>

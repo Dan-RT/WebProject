@@ -1,8 +1,9 @@
 <?php
-
 	require_once("cart_function.php");
 
 	while ($donnees = $reponse->fetch()) {
+
+		//include("modale.php");
 		/*
 		  echo $donnees['Brand'] .'<br />';
 		  echo $donnees['Product'] .'<br />';
@@ -11,6 +12,7 @@
 		  echo $donnees['Proof'] .'<br />';
 		  echo $donnees['Color'] .'<br />';
 		  echo $donnees['Picture_path'] .'<br />';
+		  echo $donnees['Country'] .'<br />';
 		  echo $donnees['Type'] .'<br />';
 		  echo $donnees['Website'] .'<br />';
 		  echo $donnees['Date'] .'<br />';
@@ -18,8 +20,7 @@
 		?>
 
 
-		<div class="col-sm-4 beer_overview" data-toggle="modal"
-			 data-target="#myModal<?php echo $i; ?>">
+		<div class="col-sm-4 beer_overview" >
 			<div class="row">
 
 				<div class="col-sm-7">
@@ -43,9 +44,26 @@
 
 					 ?>
 
-					<a href="#" style="background-color: #D85C48; color : white" class="btn btn_details">
-						<span class="glyphicon glyphicon-list icon_detail"></span>More Details
-					</a>
+				<!--	<a href="#" style="background-color: #D85C48; color : white" class="btn btn_details" data-toggle="modal"
+					   data-target="#myModal<?php //echo $donnees['id']; ?>"> -->
+
+					<form action="details_beer.php" method="post">
+						<input type='hidden' name='id' value="<?php echo $donnees['id']  ?>">
+						<input type='hidden' name='Brand' value="<?php echo $donnees['Brand']  ?>">
+						<input type='hidden' name='Product' value="<?php echo $donnees['Product'] ?>">
+						<input type='hidden' name='Price' value="<?php echo $donnees['Price']  ?>">
+						<input type='hidden' name='Volume' value="<?php echo $donnees['Volume'] ?>">
+						<input type='hidden' name='Proof' value="<?php echo $donnees['Proof'] ?>">
+						<input type='hidden' name='Color' value="<?php echo $donnees['Color'] ?>">
+						<input type='hidden' name='Country' value="<?php echo $donnees['Country'] ?>">
+						<input type='hidden' name='Picture_path' value="<?php echo $donnees['Picture_path'] ?>">
+						<input type='hidden' name='Website' value="<?php echo $donnees['Website'] ?>">
+
+						<button style="background-color: #D85C48; color: white;margin-top: 2vh " type='submit' class='btn btn_details icon_detail btn'>
+							<span class='glyphicon glyphicon-list'></span>
+							More Details
+						</button>
+					</form>
 				</ul>
 
 			</div>

@@ -151,8 +151,8 @@
                         echo "Volume : " . $donnees['Volume'] . "L". '<br />';
                         echo "Proof : " . $donnees['Proof'] . '<br />';
                         echo "Color : " . $donnees['Color'] . '<br />';
+                        echo "Country : " . $donnees['Country'] . '<br />';
                         echo "Picture path : " . $donnees['Picture_path'] . '<br />';
-                        echo "Type : " . $donnees['Type'] . '<br />';
                         echo "Website : " . $donnees['Website'] . '<br />';
                         echo "Date : " . $donnees['Date'] . '<br /><br />';
                     }
