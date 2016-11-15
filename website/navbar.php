@@ -38,7 +38,7 @@
 				<input type="search" name="search" class="input-sm form-control" placeholder="Brands">
 
 				<button type="submit" class="btn_submit btn btn-sm btn-default" value="Enter">
-					<span class="btn-xs btn-default"></span> Search
+					Search
 				</button>
 			</form>
 		</div>

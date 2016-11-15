@@ -76,6 +76,31 @@ footer ul {
 	margin-right: 1vw;
 }
 
+@media screen and (max-width: 1080px) {
+	.logo_site {
+		font-size: x-large;
+		margin-left: 6vw;
+		margin-right: 20vw;
+	}
+	.search_form, .logout_button {
+		display: inline-block;
+		margin-top: 0.5vh;
+	}
+
+}
+
+@media screen and (max-width: 1024px) {
+	.logo_site {
+		font-size: x-large;
+		margin-left: 6vw;
+		margin-right: 20vw;
+	}
+	.search_form, .logout_button {
+		display: inline-block;
+		margin-top: 1.3vh;
+	}
+
+}
 
 @media screen and (max-width: 767px) {
 	.search_form {

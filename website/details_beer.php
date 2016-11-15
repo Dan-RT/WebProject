@@ -21,7 +21,7 @@
 
     <div style="min-height: 60vh;min-height: 78vh;" class="container-fullwidth container-fluid">
         <div class="row">
-            <div style="margin-left: 25vw; margin-top: 10vh;" class="col-lg-offset-4 col-lg-6 beer_overview" >
+            <div style="margin-left: 25vw; margin-top: 10vh;" class="col-lg-offset-4 col-lg-6 beer_overview2" >
                 <div class="col-sm-7">
                     <?php echo '<img class="beer_pic" src="Pictures/' . $_POST['Picture_path'] . '" />'; ?>
                 </div>

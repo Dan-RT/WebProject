@@ -28,6 +28,7 @@
                     session_start();
                     $_SESSION['logged_in'] = 1;
                     $_SESSION['user'] = $_POST['user_name'];
+                    print("<script> window.location.href = \"cart.php\"; </script>");
                     break;
                 case "delete_user" :
                     query_database("DELETE FROM Users WHERE id=?", $_POST['id']);

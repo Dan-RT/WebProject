@@ -62,20 +62,23 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;");
 
     query_database("CREATE TABLE `Users` (
-                  `id` int(11) NOT NULL,
-                  `user_name` varchar(255) NOT NULL,
-                  `salt` varbinary(255) NOT NULL,
-                  `hashcode` varbinary(255) NOT NULL,
-                  `email` varchar(255) NOT NULL
-                ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-                ");
+  `id` int(11) NOT NULL,
+  `user_name` varchar(255) NOT NULL,
+  `salt` varbinary(255) NOT NULL,
+  `hashcode` varbinary(255) NOT NULL,
+  `email` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;");
 
     query_database("INSERT INTO `Users` (`id`, `user_name`, `salt`, `hashcode`, `email`) VALUES
-                    (19, 'admin', 0xa440ccc0db0085ea4cfc1235dcf39d44d1522653897eb845f4c2f391da33c521, 0xa4405472396256374162786559, 'test.concordia.webproject@gmail.com'),
-                    (20, 'John', 0xbde3f91815a9bee44278c4dcd2d5ed078f90307dfbbe8c05e3085db587a08eb4, 0xbde365666470413143755a2f73, ''),
-                    (21, 'user', 0x9a4328b0ad2a7739419d124b134e1f3f90ef0c45f128f05fb5abe99fd3b16cec, 0x9a43576d38654477466b373859, '');
-                    ");
+(19, 'admin', 0xa440ccc0db0085ea4cfc1235dcf39d44d1522653897eb845f4c2f391da33c521, 0xa4405472396256374162786559, 'test.concordia.webproject@gmail.com'),
+(20, 'John', 0xbde3f91815a9bee44278c4dcd2d5ed078f90307dfbbe8c05e3085db587a08eb4, 0xbde365666470413143755a2f73, ''),
+(21, 'user', 0x9a4328b0ad2a7739419d124b134e1f3f90ef0c45f128f05fb5abe99fd3b16cec, 0x9a43576d38654477466b373859, '');
+");
     query_database("ALTER TABLE `Users`
-                      ADD PRIMARY KEY (`id`);");
+  ADD PRIMARY KEY (`id`);");
+
+    query_database("ALTER TABLE `Users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;");
+
 
 ?>

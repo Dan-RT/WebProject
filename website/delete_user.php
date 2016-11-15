@@ -41,7 +41,7 @@
 
     <?php include("navbar.php"); ?>
 
-    <div class="container-fullwidth container-fluid form_section">
+    <div style="min-height: 50vh;" class="container-fullwidth container-fluid form_section">
         <div class="row">
             <div class="col-lg-offset-1 col-sm-4 details_db_delete">
                 <h4>Choose your product by giving its ID :</h4>

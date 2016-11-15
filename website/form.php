@@ -48,7 +48,19 @@
 							<button type="submit" class="btn_enter btn btn-lg btn-default" value="Enter">
 								<span class="glyphicon glyphicon-ok"></span> Enter
 							</button>
-							<p><a href="registration.php">Create your account</a></p>
+
+								<?php if($_POST["payment"] == 1) {	?>
+									<form action="registration.php" method="post">
+										<input type='hidden' name='payment' value=1>
+										<p><a type="submit" href="registration.php">Create your account</a></p>
+									</form>
+
+								<?php } else { ?>
+									<p><a href="registration.php">Create your account</a></p>
+								<?php } ?>
+
+
+
 						</form>
 					</div>
 			    </div>
