@@ -1,7 +1,19 @@
 
 <script>
-	function samePassword() {
+	function getType(input) {
+		var m = (/[\d]+(\.[\d]+)?/).exec(input);
+		if (m) {
+			// Check if there is a decimal place
+			if (m[1]) {
+				return 'float';
+			} else {
+				return 'int';
+			}
+		}
+		return 'string';
+	}
 
+	function samePassword() {
 		var password_1 = document.getElementById("password").value;
 		var password_2 = document.getElementById("confirm_password").value;
 
@@ -18,17 +30,32 @@
 			alert("All fields must be filled out");
 			return false;
 		}
-		var x = document.forms["form"]["email"].value;
+		if (getType(x) != "string") {
+			alert("User name field must be a string.");
+			return false;
+		}
+		if (x == "admin") {
+			alert("This user name is not available.");
+			return false;
+		}
+
+
+		x = document.forms["form"]["email"].value;
 		if (x == null || x == "") {
 			alert("All fields must be filled out");
 			return false;
 		}
-		var x = document.forms["form"]["password"].value;
+		if (! /^(?!(?:(?:\x22?\x5C[\x00-\x7E]\x22?)|(?:\x22?[^\x5C\x22]\x22?)){255,})(?!(?:(?:\x22?\x5C[\x00-\x7E]\x22?)|(?:\x22?[^\x5C\x22]\x22?)){65,}@)(?:(?:[\x21\x23-\x27\x2A\x2B\x2D\x2F-\x39\x3D\x3F\x5E-\x7E]+)|(?:\x22(?:[\x01-\x08\x0B\x0C\x0E-\x1F\x21\x23-\x5B\x5D-\x7F]|(?:\x5C[\x00-\x7F]))*\x22))(?:\.(?:(?:[\x21\x23-\x27\x2A\x2B\x2D\x2F-\x39\x3D\x3F\x5E-\x7E]+)|(?:\x22(?:[\x01-\x08\x0B\x0C\x0E-\x1F\x21\x23-\x5B\x5D-\x7F]|(?:\x5C[\x00-\x7F]))*\x22)))*@(?:(?:(?!.*[^.]{64,})(?:(?:(?:xn--)?[a-z0-9]+(?:-[a-z0-9]+)*\.){1,126}){1,}(?:(?:[a-z][a-z0-9]*)|(?:(?:xn--)[a-z0-9]+))(?:-[a-z0-9]+)*)|(?:\[(?:(?:IPv6:(?:(?:[a-f0-9]{1,4}(?::[a-f0-9]{1,4}){7})|(?:(?!(?:.*[a-f0-9][:\]]){7,})(?:[a-f0-9]{1,4}(?::[a-f0-9]{1,4}){0,5})?::(?:[a-f0-9]{1,4}(?::[a-f0-9]{1,4}){0,5})?)))|(?:(?:IPv6:(?:(?:[a-f0-9]{1,4}(?::[a-f0-9]{1,4}){5}:)|(?:(?!(?:.*[a-f0-9]:){5,})(?:[a-f0-9]{1,4}(?::[a-f0-9]{1,4}){0,3})?::(?:[a-f0-9]{1,4}(?::[a-f0-9]{1,4}){0,3}:)?)))?(?:(?:25[0-5])|(?:2[0-4][0-9])|(?:1[0-9]{2})|(?:[1-9]?[0-9]))(?:\.(?:(?:25[0-5])|(?:2[0-4][0-9])|(?:1[0-9]{2})|(?:[1-9]?[0-9]))){3}))\]))$/i.test(x) ) {
+			alert("Wrong mail format");
+			return false;
+		}
+		x = document.forms["form"]["password"].value;
 		if (x == null || x == "") {
 			alert("All fields must be filled out");
 			return false;
 		}
-		var x = document.forms["form"]["confirm_password"].value;
+
+		x = document.forms["form"]["confirm_password"].value;
 		if (x == null || x == "") {
 			alert("All fields must be filled out");
 			return false;

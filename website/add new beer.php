@@ -1,51 +1,114 @@
+
+
 <script>
+	/* This function comes from : http://stackoverflow.com/questions/10590973/check-if-input-is-float-or-integer  */
+
+	function getType(input) {
+		var m = (/[\d]+(\.[\d]+)?/).exec(input);
+		if (m) {
+			// Check if there is a decimal place
+			if (m[1]) { return 'float'; }
+			else { return 'int'; }
+		}
+		return 'string';
+	}
+
 	function validateForm() {
+
 		var x = document.forms["form"]["brand"].value;
 		if (x == null || x == "") {
 			alert("All fields must be filled out");
 			return false;
 		}
+		if (getType(x) != "string") {
+			alert("Brand field must be a string.");
+			return false;
+		}
+
 		x = document.forms["form"]["product"].value;
 		if (x == null || x == "") {
 			alert("All fields must be filled out");
 			return false;
 		}
+		if (getType(x) != "string") {
+			alert("Product field must be a string.");
+			return false;
+		}
+
 		x = document.forms["form"]["price"].value;
 		if (x == null || x == "") {
 			alert("All fields must be filled out");
 			return false;
 		}
+		if (getType(x) === "string") {
+				alert("Price field must be a number.");
+			return false;
+		}
+
+
 		x = document.forms["form"]["volume"].value;
 		if (x == null || x == "") {
 			alert("All fields must be filled out");
 			return false;
 		}
+		if (getType(x) === "string") {
+			alert("Volume field must be a number.");
+			return false;
+		}
+
 		x = document.forms["form"]["proof"].value;
 		if (x == null || x == "") {
 			alert("All fields must be filled out");
 			return false;
 		}
+		if (getType(x) === "string") {
+			alert("Proof field must be a number.");
+			return false;
+		}
+
 		x = document.forms["form"]["color"].value;
 		if (x == null || x == "") {
 			alert("All fields must be filled out");
 			return false;
 		}
+		if (getType(x) != "string") {
+			alert("Form field must be a string.");
+			return false;
+		}
+
 		x = document.forms["form"]["country"].value;
 		if (x == null || x == "") {
 			alert("All fields must be filled out");
 			return false;
 		}
+		if (getType(x) != "string") {
+			alert("Country field must be a string.");
+			return false;
+		}
+
 		x = document.forms["form"]["picture_path"].value;
 		if (x == null || x == "") {
 			alert("All fields must be filled out");
 			return false;
 		}
+		if (getType(x) != "string") {
+			alert("Picture field must be a string.");
+			return false;
+		}
+
 		x = document.forms["form"]["website"].value;
 		if (x == null || x == "") {
 			alert("All fields must be filled out");
 			return false;
 		}
+		if (getType(x) != "string") {
+			alert("Website field must be a string.");
+			return false;
+		}
 	}
+
+
+
 </script>
 
 

@@ -18,7 +18,7 @@
 		?>
 
 
-		<div class="col-lg-offset-1 col-sm-4 beer_overview" data-toggle="modal"
+		<div class="col-sm-4 beer_overview" data-toggle="modal"
 			 data-target="#myModal<?php echo $i; ?>">
 			<div class="row">
 

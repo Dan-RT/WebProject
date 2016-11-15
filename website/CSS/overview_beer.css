@@ -2,6 +2,8 @@ section {
 	 padding-top: 5vh;
 }
 
+
+
 .beer_overview {
 	background-color: #e5e5e5;
 	border: 2px solid #898989;
@@ -10,7 +12,9 @@ section {
  	color: black;
 	margin-bottom: 5vh;
  	text-align: center;
-	max-height: 40vh;
+	/*max-height: 40vh;*/
+	margin-left: 11vw;
+
 }
 
 .beer_overview:hover {

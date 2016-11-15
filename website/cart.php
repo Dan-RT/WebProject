@@ -93,8 +93,6 @@
 		include("navbar.php");
 		require_once("db.php");
 
-
-
 		if (isset($cart_items)) {
 
 			$splitted_cart = split(",", $cart_items);
@@ -109,7 +107,7 @@
 				}
 			}
 			//print_r($cart);
-			print ("<div class=\"container-fullwidth container-fluid\">
+			print ("<div class=\"container-fullwidth container-fluid\" style=\"min-height: 60vh;>
 						<div class=\"row\">");
 			foreach($cart as $key => $quantity) {
 				//echo $key.' -->'.$item."\n<br/>";
@@ -155,15 +153,13 @@
             </div>
         </div>
 
-
-
     <?php
 
 		} else {
     ?>
-        <div class="container-fullwidth container-fluid">
+        <div class="container-fullwidth container-fluid" style="min-height: 78vh;">
             <div class="row">
-                <div class="col-lg-offset-4 col-lg-4">
+                <div style="margin-top: 33vh; text-align: center;" class="col-lg-offset-4 col-lg-4">
                     <h3>No product in shopping cart!</h3>
                 </div>
             </div>
@@ -171,7 +167,6 @@
     <?php
 		}
     ?>
-
 
     <?php include("footer.php"); ?>
 	</body>

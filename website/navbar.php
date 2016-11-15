@@ -14,22 +14,22 @@
 	session_start();
 
 	if (!isset($_SESSION['logged_in'])) {
-		echo "<li class='first_element_nav'><a href='form.php'>Login</a></li>";
+		echo "<li class='element_nav'><a href='form.php'>Login</a></li>";
 	} elseif ($_SESSION['logged_in'] == 1 && $_SESSION['user'] == "admin") {
-		echo "<li class='first_element_nav'><a href='admin.php'>Admin</a></li>";
+		echo "<li class='element_nav'><a href='admin.php'>Admin</a></li>";
 	} else {
-		echo "<li class='first_element_nav user_name'> " . $_SESSION['user'] . "</li>";
+		echo "<li class='element_nav user_name'> " . $_SESSION['user'] . "</li>";
 	}
 
 		?>
-		<li><a href="index.php">Home</a></li>
+		<li class='element_nav'><a href="index.php">Home</a></li>
 
 
 <?php
 	if ($_SESSION['nb_items'] > 0) {
-		echo "<li> <a href='cart.php'>Cart <h4 class='nb_item'>" . " (" . $_SESSION['nb_items'] . ")" . "</h4></a></li>";
+		echo "<li class='element_nav'> <a href='cart.php'>Cart <h4 class='nb_item'>" . " (" . $_SESSION['nb_items'] . ")" . "</h4></a></li>";
 	} else {
-		echo "<li> <a href='cart.php'>Cart <h4 class='nb_item'>" . " (0)" . "</h4></a></li>";
+		echo "<li class='element_nav'> <a href='cart.php'>Cart <h4 class='nb_item'>" . " (0)" . "</h4></a></li>";
 	}
 ?>
 		<div class="navbar-form inline-form search_form">

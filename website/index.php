@@ -37,6 +37,7 @@
 
 	<body>
 
+
 		<?php
 			include("navbar.php");
 			require_once("db.php");
@@ -48,7 +49,7 @@
 			*/
 		?>
 
-		<div class="container-fullwidth container-fluid">
+		<div style="min-height: 60vh;" class="container-fullwidth container-fluid">
 			<div class="row">
 				<?php
 

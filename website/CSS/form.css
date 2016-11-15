@@ -52,6 +52,7 @@
 .admin_inside_1 {
 	padding-top: 3vh;
 	padding-bottom: 3vh;
+	margin-top: 6vh;
 }
 
 .btn_enter {
@@ -67,6 +68,7 @@ h5 {
 }
 
 .admin_links {
+	margin: none;
 	text-decoration: none;
 	color: white;
 }

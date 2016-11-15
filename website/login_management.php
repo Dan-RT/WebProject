@@ -37,13 +37,14 @@
                     $_SESSION['logged_in'] = 1;
                     //echo "Login success";
                     $flag = 0;
+                    if($_POST["payment"] == 1) {
+                        print ("<script> window.location.href = 'cart.php';</script>");
+                    } else {
+                        print ("<script> window.location.href = 'index.php';</script>");
+                    }
                 }
 
-                if($_POST["payment"] == 1) {
-                    print ("<script> window.location.href = 'cart.php';</script>");
-                } else {
-                    print ("<script> window.location.href = 'index.php';</script>");
-                }
+
             }
         }
         print ("<script> 

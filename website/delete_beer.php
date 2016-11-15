@@ -1,8 +1,25 @@
 <script>
+
+    /* This function comes from : http://stackoverflow.com/questions/10590973/check-if-input-is-float-or-integer  */
+
+    function getType(input) {
+        var m = (/[\d]+(\.[\d]+)?/).exec(input);
+        if (m) {
+            // Check if there is a decimal place
+            if (m[1]) { return 'float'; }
+            else { return 'int'; }
+        }
+        return 'string';
+    }
+
     function validateForm() {
         var x = document.forms["form"]["id"].value;
         if (x == null || x == "") {
-            alert("All fields must be filled out");
+            alert("ID field must be filled out");
+            return false;
+        }
+        if (getType(x) != "int") {
+            alert("ID field must be a integer.");
             return false;
         }
     }

@@ -12,7 +12,7 @@
 
     <?php include("navbar.php"); ?>
 
-    <div class="container-fullwidth container-fluid admin_section">
+    <div style="min-height: 46vh;" class="container-fullwidth container-fluid admin_section">
         <div class="row">
             <div class="col-lg-offset-4 col-sm-4 admin_inside_1">
                 <div class="row">
@@ -22,10 +22,10 @@
                     <a class="admin_links" href="update_beer.php">UPDATE A BEER</a>
                 </div>
                 <div class="row">
-                    <a class="admin_links" href="delete_beer.php"><p></p>DELETE A BEER</a>
+                    <a class="admin_links" href="delete_beer.php">DELETE A BEER</a>
                 </div>
                 <div class="row">
-                    <a class="admin_links" href="delete_user.php"><p></p>DELETE A USER</a>
+                    <a class="admin_links" href="delete_user.php">DELETE A USER</a>
                 </div>
             </div>
         </div>
