@@ -47,7 +47,6 @@
 		echo "<li type='hidden' class='extra_element'></li>";
 	} else {
 
-
 	?>
 			<form method="POST" action="login_management.php" class="logout_button">
 				<input type="hidden" name="choice_login" value="logout">

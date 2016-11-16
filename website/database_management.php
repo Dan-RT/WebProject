@@ -37,13 +37,9 @@
                     break;
             }
             print("<script> window.location.href = \"index.php\"; </script>");
-
             ?>
+
         </div>
-
-
-
-
     </body>
 </html>
 

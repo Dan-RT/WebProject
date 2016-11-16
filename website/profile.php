@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
     <head>
-
         <meta charset="utf-8" />
         <title>BEER'SPOT</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,17 +10,11 @@
 
     <body>
 
-    <?php
+<?php
         include("navbar.php");
         require_once("db.php");
         require_once("product.php");
-        /*
-        $test = new Product();
-        $test->read_record();
-        $test->insert_record("TEST", "TEST", "TEST", "TEST", "TEST", "TEST", "TEST", "TEST", "TEST", "TEST");
-        */
-    ?>
-
+?>
         <div class="container-fullwidth container-fluid">
             <div class="row">
                 <div class="col-lg-offset-4 col-sm-4 form_inside_1">

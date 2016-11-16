@@ -1,10 +1,10 @@
 <?php
+
 	$cart_items = null;
 
 	if (isset($_POST['item_id'])) {
 		$productToAdd = $_POST['item_id'];
 		$expiration = time() + (60*60*24*7);
-
 		//Add cart item to cookie
 
         if (isset($_SESSION['cart_items'])) {
@@ -16,9 +16,7 @@
             $cart_items = "$productToAdd";
             $_SESSION['nb_items'] = 1;
         }
-
         $_SESSION['cart_items'] = $cart_items;
-
         print("<script> window.location.href = \"index.php\"; </script>");
 	}
 
@@ -37,7 +35,6 @@
 
 	<body>
 
-
 		<?php
 			include("navbar.php");
 			require_once("db.php");
@@ -52,7 +49,6 @@
 		<div style="min-height: 60vh;" class="container-fullwidth container-fluid">
 			<div class="row">
 				<?php
-
 					if (isset($_POST['item_id'])) {
 						echo $_COOKIE['cart_items'];
 					}

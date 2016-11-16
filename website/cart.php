@@ -35,34 +35,24 @@
                 $splitted_cart = split(",", $cart_items);
                 $cart_items = null;
 
-                //print_r($splitted_cart);
-
                 $flag = 0;
 
                 foreach($splitted_cart as $item_tmp) {
-                    //echo "Post id = " . $_POST['item_id'] . "<br/>";
-                    //echo "item testé = " . $item_tmp . "<br/>";
                     if ($cart_items) {
                         if ($item_tmp == $_POST['item_id'] && $flag == 0) {
                             $flag++;
-                            //echo "egalité correcte <br/> <br/>";
                         } else {
                             $cart_items = "$cart_items,$item_tmp";
                             $_SESSION['nb_items']++;
-                            //echo "egalité fausse <br/><br/>";
                         }
                     } else {
                         if ($item_tmp == $_POST['item_id'] && $flag == 0) {
                             $flag++;
-                            //echo "new, egalité correcte <br/> <br/>";
                         } else {
                             $cart_items = "$item_tmp";
                             $_SESSION['nb_items'] = 1;
-                            //echo "new, egalité fausse <br/><br/>";
                         }
-
                     }
-                    //print_r($cart_items);
                 }
             }
 
@@ -96,7 +86,6 @@
 		if (isset($cart_items)) {
 
 			$splitted_cart = split(",", $cart_items);
-			//print_r($splitted_cart);
 			$cart = array();
 
 			foreach($splitted_cart as $itemId) {
@@ -106,8 +95,7 @@
 					$cart[$itemId] = 1;
 				}
 			}
-			//print_r($cart);
-			print ("<div class=\"container-fullwidth container-fluid\" style=\"min-height: 60vh;>
+			print ("<div class=\"container-fullwidth container-fluid\" style=\"min-height: 60vh\";>
 						<div class=\"row\">");
 			foreach($cart as $key => $quantity) {
 				//echo $key.' -->'.$item."\n<br/>";
@@ -169,5 +157,6 @@
     ?>
 
     <?php include("footer.php"); ?>
+
 	</body>
 </html>

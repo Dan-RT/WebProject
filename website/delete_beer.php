@@ -1,7 +1,6 @@
 <script>
 
     /* This function comes from : http://stackoverflow.com/questions/10590973/check-if-input-is-float-or-integer  */
-
     function getType(input) {
         var m = (/[\d]+(\.[\d]+)?/).exec(input);
         if (m) {
@@ -65,9 +64,7 @@
         </div>
 
         <div class="col-lg-offset-1 col-sm-4 col_form form_inside_1">
-
             <div class="row form_inside_1">
-
                 <form name="form" class="form_inside" action="database_management.php" method="POST" onsubmit="return validateForm()">
 
                     <h3>DELETING BEER</h3>

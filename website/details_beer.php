@@ -12,7 +12,6 @@
 
     <body>
 
-
     <?php
         include("navbar.php");
         require_once("db.php");
@@ -46,10 +45,7 @@
                 </div>
             </div>
         </div>
-
-
     </div>
-
 
     <?php include("footer.php"); ?>
 

@@ -59,7 +59,6 @@
             }
         }
         print("<div>Total Price :  $total_price $</div>");
-
     }
 
 ?>

@@ -19,14 +19,13 @@
 
         if (isset($reponse)) {
 ?>
-            <div class="container-fullwidth container-fluid">
+            <div class="container-fullwidth container-fluid" style="min-height: 78vh;">
 			    <div class="row">
                   <?php include("overview_beer.php");?>
                 </div>
             </div>
 <?php
         } else {
-            //We don't enter here :(
 ?>
 
             <div class="col-lg-offset-1 col-sm-4 beer_overview">
@@ -45,7 +44,6 @@
 
         include("footer.php");
 ?>
-
     </body>
 </html>
 

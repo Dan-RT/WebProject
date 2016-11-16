@@ -1,16 +1,14 @@
-
 <link rel="stylesheet" href="CSS/navbar.css"/>
 <link href="CSS/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
 <?php
 
     include("navbar.php");
     require_once("db.php");
 
-
     //we test if we login or logout
     if ($_POST["choice_login"] == "login") {
 
-        /*  Remember to make compulsory the filling of th form, bog when nothing's written  */
         if (isset($_POST['user_name'])) {
             $SQL_command = "SELECT * FROM Users WHERE user_name=?";
 
@@ -20,17 +18,8 @@
             /* Very simple authentification here, to be changed with SQL functions that let search in database */
 
             while (($data = $response->fetch()) && ($flag == 1)) {
-                /*
-                echo "User Name (form) : " . $_POST['user_name'] . "</br>";
-                echo "Password (form) : " . $_POST['password'] . "</br>";
-                echo "User Name (BDD) : " . $data['user_name'] . "</br>";
-                echo "Salt (BDD) : " . $data['salt'] . "</br>";
-                echo "Encrypted passcode (BDD) : " . $data['hashcode'] . "</br>";
-                */
 
                 $encrypted_pw = crypt($_POST['password'], $data['salt']);
-
-                //echo "Encrypted passcode (Site) : " . $encrypted_pw . "</br>";
 
                 if (($data['user_name'] == $_POST['user_name']) && ($data['hashcode'] == $encrypted_pw)) {
                     $_SESSION['user'] = $_POST['user_name'];
@@ -43,8 +32,6 @@
                         print ("<script> window.location.href = 'index.php';</script>");
                     }
                 }
-
-
             }
         }
         print ("<script> 

@@ -58,14 +58,10 @@
 								<?php } else { ?>
 									<p><a href="registration.php">Create your account</a></p>
 								<?php } ?>
-
-
-
 						</form>
 					</div>
 			    </div>
 			</div>
-
 	    </div>
 
 		<?php include("footer.php"); ?>

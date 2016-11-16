@@ -4,45 +4,26 @@
 	while ($donnees = $reponse->fetch()) {
 
 		//include("modale.php");
-		/*
-		  echo $donnees['Brand'] .'<br />';
-		  echo $donnees['Product'] .'<br />';
-		  echo $donnees['Price'] .'<br />';
-		  echo $donnees['Volume'] .'<br />';
-		  echo $donnees['Proof'] .'<br />';
-		  echo $donnees['Color'] .'<br />';
-		  echo $donnees['Picture_path'] .'<br />';
-		  echo $donnees['Country'] .'<br />';
-		  echo $donnees['Type'] .'<br />';
-		  echo $donnees['Website'] .'<br />';
-		  echo $donnees['Date'] .'<br />';
-		  */
-		?>
-
+?>
 
 		<div class="col-sm-4 beer_overview" >
 			<div class="row">
-
 				<div class="col-sm-7">
-
 					<?php echo '<img class="beer_pic" src="Pictures/' . $donnees['Picture_path'] . '" />'; ?>
-
 				</div>
-
 				<ul class="col-sm-5 detail_beer">
-
 					<li><?php echo $donnees['Brand'] . " " . $donnees['Product']; ?></li>
 					<li><?php echo $donnees['Price'] . " $"; ?></li>
 					<li><?php echo $donnees['Volume'] . " L"; ?></li>
 
-					<?php
+<?php
 						if($choice == 1) {
 							print_add_button($donnees['id'], $quantity);
 						} elseif ($choice == 2) {
 							print_plus_button($donnees['id'], $quantity, $donnees['Price']);
 						}
 
-					 ?>
+ ?>
 
 				<!--	<a href="#" style="background-color: #D85C48; color : white" class="btn btn_details" data-toggle="modal"
 					   data-target="#myModal<?php //echo $donnees['id']; ?>"> -->
@@ -65,16 +46,13 @@
 						</button>
 					</form>
 				</ul>
-
 			</div>
 		</div>
 
-		<?php
+<?php
 		//include("modale.php");
 	}
-
 	$reponse->closeCursor();
-
 ?>
 
 

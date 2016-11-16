@@ -13,16 +13,10 @@
     <?php include("navbar.php"); ?>
 
         <div class="container-fullwidth container-fluid form_section">
-
-
-
             <div class="row">
                 <div class="col-lg-offset-4 col-sm-4 form_inside_1">
-
                     <div class="row form_inside">
-
                         <form action="login_management.php" method="POST">
-
                             <p>
                                 <label><input class="input-lg form-control" name="user_name" placeholder="Insert your email"/></label>
                             </p>
@@ -35,11 +29,9 @@
                             </button>
                             <p><a href="registration.php">Create your account</a></p>
                         </form>
-
                     </div>
                 </div>
             </div>
-
         </div>
 
     <?php include("footer.php"); ?>
